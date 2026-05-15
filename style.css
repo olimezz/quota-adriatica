@@ -271,7 +271,7 @@ p {
 
 /* --- Navbar --- */
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -350,7 +350,7 @@ p {
 
 /* --- Hero Section --- */
 .hero {
-    padding: 160px 0 100px;
+    padding: 120px 0 100px;
     min-height: 100vh;
     display: flex;
     align-items: center;
