@@ -850,6 +850,10 @@ p {
         object-fit: cover;
     }
 
+    .hero-heading {
+        font-size: 1.4rem;
+    }
+
     .cards-grid {
         grid-template-columns: 1fr;
     }
