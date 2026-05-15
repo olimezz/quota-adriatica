@@ -361,14 +361,15 @@ p {
 }
 
 .logo-tagline {
-    font-family: var(--font-body);
-    font-size: clamp(0.875rem, 2vw, 1.25rem);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 800;
+    text-transform: none;
+    letter-spacing: -2px;
     color: var(--white);
-    margin-top: 4px;
+    margin-bottom: 20px;
     font-style: italic;
+    line-height: 1;
 }
 
 .hero-heading {
