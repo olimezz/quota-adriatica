@@ -753,13 +753,78 @@ p {
     }
 }
 
+/* --- Hamburger Menu --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background-color: var(--navy);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-cta-mobile {
+    display: none;
+}
+
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-cta-desktop {
+        display: none;
+    }
+
+    .nav-cta-mobile {
+        display: inline-block;
+        margin-top: 5px;
+    }
+
     .nav-links {
-        gap: 12px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--off-white);
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 25px 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav-links.open {
+        display: flex;
     }
 
     .nav-link {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .cards-grid {
