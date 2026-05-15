@@ -6,7 +6,7 @@
     --mountain: #705238; /* Montagna */
     --hill: #648242;     /* Collina */
     --white: #FFFFFF;
-    --off-white: #f0ede4;
+    --off-white: #ffffff;
     --muted: #e5e2d8;
     --text-main: #333333;
     --text-light: #666666;
@@ -323,11 +323,25 @@ p {
     font-style: italic;
 }
 
+.hero-logo {
+    width: clamp(200px, 40vw, 350px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
 .logo-img {
     height: 72px;
     width: 72px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.navbar .logo-img {
+    width: auto;
+    object-fit: contain;
+    border-radius: 0;
 }
 
 .justify-center {

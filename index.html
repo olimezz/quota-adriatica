@@ -20,7 +20,7 @@
             <div class="logo">
                 <img src="logo.png" alt="Quota Adriatica Logo" class="logo-img" onerror="this.style.display='none'">
             </div>
-            <a href="#contatti" class="btn btn-outline-hill">Contattaci</a>
+            <a href="#contatti" class="btn btn-outline-sea">Contattaci</a>
         </div>
     </nav>
 
@@ -29,8 +29,8 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="logo-text mb-3">
-                    <span class="logo-title">Quota Adriatica</span>
-                    <span class="logo-tagline">Dalla costa alla vetta del tuo mercato</span>
+                    <img src="logo_completo.png" alt="Quota Adriatica" class="hero-logo">
+                    <span class="logo-tagline text-white">Dalla costa alla vetta del tuo mercato</span>
                 </div>
                 <span class="badge border-hill text-hill">Agenzia Web & Social | Pescara</span>
                 <h1>Il tuo business vale le grandi mete nazionali. <span class="text-sea">È ora di farlo sapere a tutti.</span></h1>
@@ -89,14 +89,14 @@
                 <div class="card premium-card">
                     <div class="card-header">
                         <i data-lucide="umbrella" class="card-icon text-sea"></i>
-                        <h3>Pacchetto "Lido Premium"</h3>
+                        <h3>Pacchetto \"Lido Premium\"</h3>
                         <span class="card-target">Per Stabilimenti Balneari</span>
                     </div>
                     <div class="card-body">
                         <ul class="benefit-list list-sea">
                             <li><i data-lucide="check-circle-2"></i> Sito mobile-first</li>
                             <li><i data-lucide="check-circle-2"></i> Menu e prenotazione ombrelloni online</li>
-                            <li><i data-lucide="check-circle-2"></i> Social "Effetto FOMO"</li>
+                            <li><i data-lucide="check-circle-2"></i> Social \"Effetto FOMO\"</li>
                             <li><i data-lucide="check-circle-2"></i> Local SEO per intercettare i turisti</li>
                         </ul>
                     </div>
@@ -109,7 +109,7 @@
                 <div class="card hill-card">
                     <div class="card-header">
                         <i data-lucide="home" class="card-icon text-white"></i>
-                        <h3 class="text-white">Pacchetto "Ospitalità Autentica"</h3>
+                        <h3 class="text-white">Pacchetto \"Ospitalità Autentica\"</h3>
                         <span class="card-target text-white">Per Agriturismi</span>
                     </div>
                     <div class="card-body text-white">
@@ -160,10 +160,9 @@
 
             <div class="footer-bottom">
                 <div class="logo justify-center mb-3">
-                    <img src="logo.png" alt="Quota Adriatica Logo" class="logo-img" onerror="this.style.display='none'">
-                    <div class="logo-text">
-                        <span class="logo-title">Quota Adriatica</span>
-                        <span class="logo-tagline">Dalla costa alla vetta del tuo mercato</span>
+                    <img src="logo_completo.png" alt="Quota Adriatica Logo" class="logo-img" onerror="this.style.display='none'">
+                    <div class="logo-text mt-2">
+                        <span class="logo-tagline text-white">Dalla costa alla vetta del tuo mercato</span>
                     </div>
                 </div>
                 <p>&copy; 2026 Quota Adriatica. Tutti i diritti riservati. Sede: Pescara, Abruzzo.</p>
@@ -176,7 +175,7 @@
         lucide.createIcons();
         
         // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
