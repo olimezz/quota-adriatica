@@ -91,6 +91,16 @@ p {
     margin-bottom: 2rem;
 }
 
+.subtitle-under-image {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 400;
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto 0;
+    line-height: 1.5;
+}
+
 .lead-text {
     font-size: 1.5rem;
     font-weight: 500;
