@@ -301,6 +301,41 @@ p {
     align-items: center;
 }
 
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--sea);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--sea);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -719,6 +754,10 @@ p {
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
     .cards-grid {
         grid-template-columns: 1fr;
     }
