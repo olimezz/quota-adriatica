@@ -371,6 +371,11 @@ p {
     font-style: italic;
 }
 
+.hero-heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.5px;
+}
+
 .hero-logo {
     width: clamp(200px, 40vw, 350px);
     aspect-ratio: 1 / 1;
