@@ -72,6 +72,7 @@ p {
 }
 
 .text-sea { color: var(--sea); }
+.text-gold { color: #f3d179; }
 .text-mountain { color: var(--mountain); }
 .text-hill { color: var(--hill); }
 .text-navy { color: var(--navy); }
