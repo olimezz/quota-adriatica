@@ -71,13 +71,13 @@ p {
     margin-bottom: 1rem;
 }
 
-.text-sea { color: var(--sea); }
-.text-gold { color: #f3d179; }
-.text-mountain { color: var(--mountain); }
-.text-hill { color: var(--hill); }
-.text-navy { color: var(--navy); }
-.text-dark { color: var(--text-main); }
-.text-white { color: var(--white); }
+.text-sea { color: var(--sea) !important; }
+.text-gold { color: #f3d179 !important; }
+.text-mountain { color: var(--mountain) !important; }
+.text-hill { color: var(--hill) !important; }
+.text-navy { color: var(--navy) !important; }
+.text-dark { color: var(--text-main) !important; }
+.text-white { color: var(--white) !important; }
 
 .bg-sea { background-color: var(--sea); }
 .bg-mountain { background-color: var(--mountain); }
