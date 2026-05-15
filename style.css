@@ -754,8 +754,22 @@ p {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
     .nav-links {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
     }
 
     .cards-grid {
