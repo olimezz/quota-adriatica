@@ -103,7 +103,7 @@
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
 }
-.macro-icon i { width: 26px; height: 26px; }
+.macro-icon i, .macro-icon svg { width: 26px; height: 26px; }
 
 .macro-icon-web {
     background: rgba(38,135,186,0.15);
@@ -402,7 +402,7 @@
     .plans-grid { padding: 0 16px 24px; }
     .macro-title { font-size: 1.1rem; }
     .macro-icon { width: 44px; height: 44px; border-radius: 12px; }
-    .macro-icon i { width: 22px; height: 22px; }
+    .macro-icon i, .macro-icon svg { width: 22px; height: 22px; }
     .btn-scopri { padding: 8px 14px; font-size: 0.82rem; }
     .sv-hero { padding: 110px 0 60px; }
 }
