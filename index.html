@@ -242,30 +242,66 @@
     <!-- ====================================================
          IL PROBLEMA
          ==================================================== -->
-    <section class="problem section-subtle" id="problema">
+    <section class="problem" id="problema">
+        <!-- Orbs decorativi eco della Hero -->
+        <div class="problem-orb problem-orb-1"></div>
+        <div class="problem-orb problem-orb-2"></div>
+
+        <!-- Onda di transizione dal Configuratore (bianco → dark) -->
+        <div class="problem-wave-top">
+            <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,0 L0,0 Z" fill="#f5f8fb"/>
+            </svg>
+        </div>
+
         <div class="container problem-container">
-            <div class="problem-header text-center">
-                <i data-lucide="trending-down" class="icon-large text-mountain"></i>
-                <h2>Perché la concorrenza di fuori regione fattura di più?</h2>
-                <div class="divider bg-mountain mx-auto"></div>
-            </div>
-            <div class="problem-content text-center">
-                <p class="lead-text">Hai una struttura di altissima qualità in Abruzzo, ma i turisti scelgono mete come
-                    la Riviera Romagnola o il Salento.</p>
-                <p>Il loro segreto non è il mare, ma il <strong>posizionamento digitale</strong>. Hanno siti veloci,
-                    social impeccabili e si fanno trovare. Noi colmiamo questo divario.</p>
-                <div class="features-grid mt-4">
-                    <div class="feature-item">
-                        <i data-lucide="zap" class="icon text-mountain"></i>
-                        <span>Siti Veloci e Ottimizzati</span>
+            <!-- Badge — stesso componente della Hero -->
+            <span class="badge badge-glow mb-3">📉 Il vero problema del tuo business</span>
+
+            <!-- Titolo con gradient text su keyword, tracking come Hero -->
+            <h2 class="problem-title">
+                Perché la concorrenza di fuori regione<br>
+                <span class="text-gradient-sea">fattura il doppio</span> della tua?
+            </h2>
+
+            <!-- Testo narrativo su sfondo scuro -->
+            <p class="problem-lead">
+                Hai una struttura di altissima qualità in Abruzzo, ma i turisti scelgono mete come la
+                <strong>Riviera Romagnola</strong> o il <strong>Salento</strong>.
+                Il loro segreto non è il mare — è il
+                <span class="text-gradient-sea">posizionamento digitale</span>.
+            </p>
+            <p class="problem-body">
+                Hanno siti veloci, social impeccabili e si fanno trovare su Google. Noi colmiamo questo divario.
+            </p>
+
+            <!-- Features glassmorphism — 3 colonne -->
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon-wrap">
+                        <i data-lucide="zap" class="feature-icon"></i>
                     </div>
-                    <div class="feature-item">
-                        <i data-lucide="smartphone" class="icon text-mountain"></i>
-                        <span>Presenza Social Impeccabile</span>
+                    <div class="feature-text">
+                        <strong>Siti Veloci e Ottimizzati</strong>
+                        <span>Core Web Vitals al top</span>
                     </div>
-                    <div class="feature-item">
-                        <i data-lucide="search" class="icon text-mountain"></i>
-                        <span>Fatti Trovare Facilmente</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrap">
+                        <i data-lucide="smartphone" class="feature-icon"></i>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Presenza Social Impeccabile</strong>
+                        <span>Content che converte</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrap">
+                        <i data-lucide="search" class="feature-icon"></i>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Fatti Trovare Facilmente</strong>
+                        <span>Local SEO dominante</span>
                     </div>
                 </div>
             </div>
