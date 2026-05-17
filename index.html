@@ -18,548 +18,387 @@
 
 <body>
 
-    <!-- Skip-to-content per navigazione da tastiera (A11Y) -->
-    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
-
     <!-- ====================================================
-         NAVBAR
+         NAVBAR — glassmorphism su scroll
          ==================================================== -->
-    <nav class="navbar" id="navbar" aria-label="Navigazione principale">
+    <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Quota Adriatica — torna alla home" class="logo-img"
-                    onerror="this.style.display='none'">
+                <img src="logo.png" alt="Quota Adriatica" class="logo-img" onerror="this.style.display='none'">
             </div>
-
-            <div class="nav-links" id="navLinks" role="list">
-                <a href="#configuratore" class="nav-link" role="listitem">Configura</a>
-                <a href="#servizi"       class="nav-link" role="listitem">Soluzioni</a>
-                <a href="#chi-siamo"     class="nav-link" role="listitem">Chi Siamo</a>
-                <a href="#faq"           class="nav-link" role="listitem">FAQ</a>
-                <a href="#configuratore" class="btn btn-primary nav-cta-mobile" role="listitem">Inizia Gratis</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#configuratore" class="nav-link">Configura</a>
+                <a href="#problema" class="nav-link">Il Problema</a>
+                <a href="#servizi" class="nav-link">Soluzioni</a>
+                <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
+                <a href="#configuratore" class="btn btn-primary nav-cta-mobile">Inizia Gratis</a>
             </div>
-
-            <a href="#configuratore" class="btn btn-primary nav-cta-desktop"
-               aria-label="Inizia gratis — vai al configuratore">Inizia Gratis</a>
-
-            <button class="hamburger" id="hamburger"
-                    aria-label="Apri menu di navigazione"
-                    aria-expanded="false"
-                    aria-controls="navLinks">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+            <a href="#configuratore" class="btn btn-primary nav-cta-desktop">Inizia Gratis</a>
+            <button class="hamburger" id="hamburger" aria-label="Apri menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
     <!-- ====================================================
-         MAIN — contenuto principale della pagina
+         HERO — gradiente adriatico animato
          ==================================================== -->
-    <main id="main-content">
+    <header class="hero">
+        <!-- Sfere luminose animate -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <!-- Griglia decorativa sottile -->
+        <div class="hero-grid"></div>
 
-        <!-- HERO -->
-        <header class="hero" aria-labelledby="hero-heading">
-            <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-            <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
-            <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
-            <div class="hero-grid"           aria-hidden="true"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge badge-glow">🌊 Agenzia Web &amp; Social — Pescara, Abruzzo</span>
 
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="badge badge-glow" aria-hidden="true">🌊 Agenzia Web &amp; Social — Pescara, Abruzzo</span>
+                <h1 class="hero-title">
+                    Il tuo sito web deve
+                    <span class="text-gradient-sea">vendere,</span><br>
+                    non esistere soltanto.
+                </h1>
 
-                    <h1 class="hero-title" id="hero-heading">
-                        Il tuo sito web deve
-                        <span class="text-gradient-sea">vendere,</span><br>
-                        non esistere soltanto.
-                    </h1>
+                <p class="hero-subtitle">
+                    Trasformiamo la tua presenza digitale in un motore di clienti. Siti veloci,
+                    strategie social e SEO locale per le aziende abruzzesi che vogliono dominare il loro mercato.
+                </p>
 
-                    <p class="hero-subtitle">
-                        Trasformiamo la tua presenza digitale in un motore di clienti. Siti veloci,
-                        strategie social e SEO locale per le aziende abruzzesi che vogliono dominare il loro mercato.
-                    </p>
+                <!-- CTA primaria gigante -->
+                <a href="#configuratore" class="btn-hero-cta" id="ctaHero">
+                    <span class="cta-icon"><i data-lucide="rocket"></i></span>
+                    Inizia a progettare il tuo sito
+                    <span class="cta-arrow">→</span>
+                </a>
+                <p class="cta-sub">Gratis · Senza impegno · Risposta in 24h</p>
 
-                    <a href="#configuratore" class="btn-hero-cta" id="ctaHero"
-                       aria-label="Inizia a progettare il tuo sito — vai al configuratore gratuito">
-                        <span class="cta-icon" aria-hidden="true"><i data-lucide="rocket"></i></span>
-                        Inizia a progettare il tuo sito
-                        <span class="cta-arrow" aria-hidden="true">→</span>
-                    </a>
-                    <p class="cta-sub">Gratis · Senza impegno · Risposta in 24h</p>
-
-                    <div class="hero-proof" aria-label="Numeri chiave di Quota Adriatica">
-                        <div class="proof-item">
-                            <strong>100%</strong>
-                            <span>Abruzzesi</span>
-                        </div>
-                        <div class="proof-divider" aria-hidden="true"></div>
-                        <div class="proof-item">
-                            <strong>+40</strong>
-                            <span>Aziende servite</span>
-                        </div>
-                        <div class="proof-divider" aria-hidden="true"></div>
-                        <div class="proof-item">
-                            <strong>24h</strong>
-                            <span>Risposta garantita</span>
-                        </div>
+                <!-- Numeri di credibilità -->
+                <div class="hero-proof">
+                    <div class="proof-item">
+                        <strong>100%</strong>
+                        <span>Abruzzesi</span>
+                    </div>
+                    <div class="proof-divider"></div>
+                    <div class="proof-item">
+                        <strong>+40</strong>
+                        <span>Aziende servite</span>
+                    </div>
+                    <div class="proof-divider"></div>
+                    <div class="proof-item">
+                        <strong>24h</strong>
+                        <span>Risposta garantita</span>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="hero-wave" aria-hidden="true">
-                <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                    <path d="M0,50 C360,90 720,10 1080,50 C1260,70 1380,30 1440,50 L1440,80 L0,80 Z" fill="#ffffff"/>
-                </svg>
+        <!-- Onda di transizione verso il bianco -->
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,50 C360,90 720,10 1080,50 C1260,70 1380,30 1440,50 L1440,80 L0,80 Z" fill="#ffffff"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- ====================================================
+         CONFIGURATORE — form multi-step interattivo
+         ==================================================== -->
+    <section class="configuratore" id="configuratore">
+        <div class="container">
+            <div class="config-header text-center">
+                <span class="badge badge-sea-solid">Gratis · Senza impegno · 1 minuto</span>
+                <h2>Configura il tuo Sito in <span class="text-sea">1 Minuto</span></h2>
+                <p class="config-intro">Rispondi a 3 semplici domande e ricevi una proposta personalizzata.</p>
             </div>
-        </header>
 
-        <!-- ====================================================
-             CONFIGURATORE — form multi-step interattivo
-             ==================================================== -->
-        <section class="configuratore" id="configuratore" aria-labelledby="config-title">
-            <div class="container">
-                <div class="config-header text-center">
-                    <span class="badge badge-sea-solid">Gratis · Senza impegno · 1 minuto</span>
-                    <h2 id="config-title">Configura il tuo Sito in <span class="text-sea">1 Minuto</span></h2>
-                    <p class="config-intro">Rispondi a 3 semplici domande e ricevi una proposta personalizzata.</p>
+            <div class="config-wrapper">
+
+                <!-- Indicatore di progresso -->
+                <div class="config-progress-header">
+                    <div class="config-steps-indicator">
+                        <div class="step-pill active" data-step="1">
+                            <span class="step-num">1</span>
+                            <span class="step-label">Tipo</span>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step-pill" data-step="2">
+                            <span class="step-num">2</span>
+                            <span class="step-label">Stile</span>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step-pill" data-step="3">
+                            <span class="step-num">3</span>
+                            <span class="step-label">Contatti</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="config-wrapper">
-
-                    <!-- Indicatore di progresso -->
-                    <div class="config-progress-header" aria-hidden="true">
-                        <div class="config-steps-indicator">
-                            <div class="step-pill active" data-step="1">
-                                <span class="step-num">1</span>
-                                <span class="step-label">Tipo</span>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step-pill" data-step="2">
-                                <span class="step-num">2</span>
-                                <span class="step-label">Stile</span>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step-pill" data-step="3">
-                                <span class="step-num">3</span>
-                                <span class="step-label">Contatti</span>
-                            </div>
+                <!-- Step 1: Tipo di progetto -->
+                <div class="config-step active" id="step-1">
+                    <h3 class="step-question">Che tipo di sito hai bisogno?</h3>
+                    <div class="option-grid">
+                        <div class="option-card" data-step="1" data-value="ecommerce">
+                            <div class="option-icon"><i data-lucide="shopping-cart"></i></div>
+                            <div class="option-title">E-commerce</div>
+                            <div class="option-desc">Vendi online i tuoi prodotti</div>
+                        </div>
+                        <div class="option-card" data-step="1" data-value="vetrina">
+                            <div class="option-icon"><i data-lucide="layout"></i></div>
+                            <div class="option-title">Sito Vetrina</div>
+                            <div class="option-desc">Presenta la tua attività</div>
+                        </div>
+                        <div class="option-card" data-step="1" data-value="landing">
+                            <div class="option-icon"><i data-lucide="target"></i></div>
+                            <div class="option-title">Landing Page</div>
+                            <div class="option-desc">Converti visitatori in clienti</div>
+                        </div>
+                        <div class="option-card" data-step="1" data-value="portale">
+                            <div class="option-icon"><i data-lucide="layers"></i></div>
+                            <div class="option-title">Portale</div>
+                            <div class="option-desc">Gestisci accessi e contenuti</div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Step 1: Tipo di progetto -->
-                    <div class="config-step active" id="step-1"
-                         role="group" aria-labelledby="step-1-label">
-                        <h3 class="step-question" id="step-1-label">Che tipo di sito hai bisogno?</h3>
-                        <div class="option-grid">
-                            <div class="option-card" data-step="1" data-value="ecommerce"
-                                 role="button" tabindex="0" aria-pressed="false"
-                                 aria-label="E-commerce — vendi online i tuoi prodotti">
-                                <div class="option-icon" aria-hidden="true"><i data-lucide="shopping-cart"></i></div>
-                                <div class="option-title">E-commerce</div>
-                                <div class="option-desc">Vendi online i tuoi prodotti</div>
+                <!-- Step 2: Stile visivo -->
+                <div class="config-step" id="step-2">
+                    <h3 class="step-question">Che stile visivo preferisci?</h3>
+                    <div class="option-grid style-grid">
+                        <div class="option-card style-card" data-step="2" data-value="minimale">
+                            <div class="style-preview preview-minimale">
+                                <div class="preview-bar"></div>
+                                <div class="preview-block"></div>
+                                <div class="preview-line"></div>
+                                <div class="preview-line short"></div>
                             </div>
-                            <div class="option-card" data-step="1" data-value="vetrina"
-                                 role="button" tabindex="0" aria-pressed="false"
-                                 aria-label="Sito Vetrina — presenta la tua attività">
-                                <div class="option-icon" aria-hidden="true"><i data-lucide="layout"></i></div>
-                                <div class="option-title">Sito Vetrina</div>
-                                <div class="option-desc">Presenta la tua attività</div>
+                            <div class="option-title">Minimale / Moderno</div>
+                            <div class="option-desc">Pulito, essenziale, professionale</div>
+                        </div>
+                        <div class="option-card style-card" data-step="2" data-value="elegante">
+                            <div class="style-preview preview-elegante">
+                                <div class="preview-bar dark"></div>
+                                <div class="preview-block gold"></div>
+                                <div class="preview-line light"></div>
+                                <div class="preview-line short light"></div>
                             </div>
-                            <div class="option-card" data-step="1" data-value="landing"
-                                 role="button" tabindex="0" aria-pressed="false"
-                                 aria-label="Landing Page — converti visitatori in clienti">
-                                <div class="option-icon" aria-hidden="true"><i data-lucide="target"></i></div>
-                                <div class="option-title">Landing Page</div>
-                                <div class="option-desc">Converti visitatori in clienti</div>
+                            <div class="option-title">Elegante / Corporate</div>
+                            <div class="option-desc">Autorevole, raffinato, fiducia</div>
+                        </div>
+                        <div class="option-card style-card" data-step="2" data-value="creativo">
+                            <div class="style-preview preview-creativo">
+                                <div class="preview-bar grad"></div>
+                                <div class="preview-block rounded"></div>
+                                <div class="preview-line colored"></div>
+                                <div class="preview-line short colored"></div>
                             </div>
-                            <div class="option-card" data-step="1" data-value="portale"
-                                 role="button" tabindex="0" aria-pressed="false"
-                                 aria-label="Portale — gestisci accessi e contenuti">
-                                <div class="option-icon" aria-hidden="true"><i data-lucide="layers"></i></div>
-                                <div class="option-title">Portale</div>
-                                <div class="option-desc">Gestisci accessi e contenuti</div>
-                            </div>
+                            <div class="option-title">Creativo / Colorato</div>
+                            <div class="option-desc">Vivace, originale, impatto visivo</div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Step 2: Stile visivo -->
-                    <div class="config-step" id="step-2"
-                         role="group" aria-labelledby="step-2-label">
-                        <h3 class="step-question" id="step-2-label">Che stile visivo preferisci?</h3>
-                        <div class="option-grid style-grid">
-                            <div class="option-card style-card" data-step="2" data-value="minimale"
-                                 role="button" tabindex="0" aria-pressed="false"
-                                 aria-label="Stile Minimale Moderno — pulito, essenziale, professionale">
-                                <div class="style-preview preview-minimale" aria-hidden="true">
-                                    <div class="preview-bar"></div>
-                                    <div class="preview-block"></div>
-                                    <div class="preview-line"></div>
-                                    <div class="preview-line short"></div>
-                                </div>
-                                <div class="option-title">Minimale / Moderno</div>
-                                <div class="option-desc">Pulito, essenziale, professionale</div>
-                            </div>
-                            <div class="option-card style-card" data-step="2" data-value="elegante"
-                                 role="button" tabindex="0" aria-pressed="false"
-                                 aria-label="Stile Elegante Corporate — autorevole, raffinato">
-                                <div class="style-preview preview-elegante" aria-hidden="true">
-                                    <div class="preview-bar dark"></div>
-                                    <div class="preview-block gold"></div>
-                                    <div class="preview-line light"></div>
-                                    <div class="preview-line short light"></div>
-                                </div>
-                                <div class="option-title">Elegante / Corporate</div>
-                                <div class="option-desc">Autorevole, raffinato, fiducia</div>
-                            </div>
-                            <div class="option-card style-card" data-step="2" data-value="creativo"
-                                 role="button" tabindex="0" aria-pressed="false"
-                                 aria-label="Stile Creativo Colorato — vivace, originale">
-                                <div class="style-preview preview-creativo" aria-hidden="true">
-                                    <div class="preview-bar grad"></div>
-                                    <div class="preview-block rounded"></div>
-                                    <div class="preview-line colored"></div>
-                                    <div class="preview-line short colored"></div>
-                                </div>
-                                <div class="option-title">Creativo / Colorato</div>
-                                <div class="option-desc">Vivace, originale, impatto visivo</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Contatti -->
-                    <div class="config-step" id="step-3"
-                         role="group" aria-labelledby="step-3-label">
-                        <h3 class="step-question" id="step-3-label">Quasi fatto! Chi sei?</h3>
-                        <div class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="config-nome">Il tuo nome <abbr title="campo obbligatorio">*</abbr></label>
-                                    <input type="text" id="config-nome"
-                                           placeholder="Es. Marco Rossi"
-                                           aria-required="true"
-                                           autocomplete="name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="config-email">Email <abbr title="campo obbligatorio">*</abbr></label>
-                                    <input type="email" id="config-email"
-                                           placeholder="Es. marco@mioristorante.it"
-                                           aria-required="true"
-                                           autocomplete="email">
-                                </div>
+                <!-- Step 3: Contatti -->
+                <div class="config-step" id="step-3">
+                    <h3 class="step-question">Quasi fatto! Chi sei?</h3>
+                    <div class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="config-nome">Il tuo nome *</label>
+                                <input type="text" id="config-nome" placeholder="Es. Marco Rossi">
                             </div>
                             <div class="form-group">
-                                <label for="config-note">Raccontaci la tua attività</label>
-                                <textarea id="config-note" rows="3"
-                                          placeholder="Es. Gestisco un ristorante a Pescara e voglio più prenotazioni dirette..."
-                                          autocomplete="off"></textarea>
+                                <label for="config-email">Email *</label>
+                                <input type="email" id="config-email" placeholder="Es. marco@mioristorante.it">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="config-note">Raccontaci la tua attività</label>
+                            <textarea id="config-note" rows="3"
+                                placeholder="Es. Gestisco un ristorante a Pescara e voglio più prenotazioni dirette..."></textarea>
+                        </div>
                     </div>
+                </div>
 
-                    <!-- Step successo -->
-                    <div class="config-step config-success" id="step-success" aria-live="polite">
-                        <div class="success-icon" aria-hidden="true"><i data-lucide="check-circle"></i></div>
-                        <h3>Richiesta inviata con successo!</h3>
-                        <p>Ti contatteremo entro <strong>24 ore</strong> con una proposta su misura. Controlla la tua email.</p>
-                        <a href="#servizi" class="btn btn-primary mt-4">Scopri i nostri pacchetti →</a>
+                <!-- Step successo -->
+                <div class="config-step config-success" id="step-success">
+                    <div class="success-icon"><i data-lucide="check-circle"></i></div>
+                    <h3>Richiesta inviata con successo!</h3>
+                    <p>Ti contatteremo entro <strong>24 ore</strong> con una proposta su misura. Controlla la tua email.</p>
+                    <a href="#servizi" class="btn btn-primary mt-4">Scopri i nostri pacchetti →</a>
+                </div>
+
+                <!-- Navigazione step -->
+                <div class="config-nav" id="configNav">
+                    <button class="btn btn-outline-sea config-prev" id="prevBtn">← Indietro</button>
+                    <button class="btn btn-primary config-next" id="nextBtn">Avanti →</button>
+                </div>
+
+            </div><!-- .config-wrapper -->
+        </div>
+    </section>
+
+    <!-- ====================================================
+         IL PROBLEMA
+         ==================================================== -->
+    <section class="problem section-subtle" id="problema">
+        <div class="container problem-container">
+            <div class="problem-header text-center">
+                <i data-lucide="trending-down" class="icon-large text-mountain"></i>
+                <h2>Perché la concorrenza di fuori regione fattura di più?</h2>
+                <div class="divider bg-mountain mx-auto"></div>
+            </div>
+            <div class="problem-content text-center">
+                <p class="lead-text">Hai una struttura di altissima qualità in Abruzzo, ma i turisti scelgono mete come
+                    la Riviera Romagnola o il Salento.</p>
+                <p>Il loro segreto non è il mare, ma il <strong>posizionamento digitale</strong>. Hanno siti veloci,
+                    social impeccabili e si fanno trovare. Noi colmiamo questo divario.</p>
+                <div class="features-grid mt-4">
+                    <div class="feature-item">
+                        <i data-lucide="zap" class="icon text-mountain"></i>
+                        <span>Siti Veloci e Ottimizzati</span>
                     </div>
-
-                    <!-- Navigazione step -->
-                    <div class="config-nav" id="configNav">
-                        <button class="btn btn-outline-sea config-prev" id="prevBtn"
-                                aria-label="Torna allo step precedente">← Indietro</button>
-                        <button class="btn btn-primary config-next" id="nextBtn"
-                                aria-label="Prosegui allo step successivo">Avanti →</button>
+                    <div class="feature-item">
+                        <i data-lucide="smartphone" class="icon text-mountain"></i>
+                        <span>Presenza Social Impeccabile</span>
                     </div>
-
+                    <div class="feature-item">
+                        <i data-lucide="search" class="icon text-mountain"></i>
+                        <span>Fatti Trovare Facilmente</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ====================================================
-             IL PROBLEMA
-             ==================================================== -->
-        <section class="problem section-light" id="problema" aria-labelledby="problema-title">
-            <div class="container problem-container">
-                <div class="problem-header text-center">
-                    <i data-lucide="trending-down" class="icon-large text-mountain" aria-hidden="true"></i>
-                    <h2 id="problema-title">Perché la concorrenza di fuori regione fattura di più?</h2>
-                    <div class="divider bg-mountain mx-auto" aria-hidden="true"></div>
-                </div>
-                <div class="problem-content text-center">
-                    <p class="lead-text">Hai una struttura di altissima qualità in Abruzzo, ma i turisti scelgono mete come
-                        la Riviera Romagnola o il Salento.</p>
-                    <p>Il loro segreto non è il mare, ma il <strong>posizionamento digitale</strong>. Hanno siti veloci,
-                        social impeccabili e si fanno trovare. Noi colmiamo questo divario.</p>
-                    <div class="features-grid mt-4">
-                        <div class="feature-item">
-                            <i data-lucide="zap" class="icon text-mountain" aria-hidden="true"></i>
-                            <span>Siti Veloci e Ottimizzati</span>
-                        </div>
-                        <div class="feature-item">
-                            <i data-lucide="smartphone" class="icon text-mountain" aria-hidden="true"></i>
-                            <span>Presenza Social Impeccabile</span>
-                        </div>
-                        <div class="feature-item">
-                            <i data-lucide="search" class="icon text-mountain" aria-hidden="true"></i>
-                            <span>Fatti Trovare Facilmente</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- ====================================================
+         PACCHETTI
+         ==================================================== -->
+    <section class="packages" id="servizi">
+        <div class="container packages-container">
+            <div class="text-center mb-5">
+                <h2>Le colonne portanti dell'economia abruzzese. Le nostre soluzioni.</h2>
+                <p class="subtitle mx-auto">Che tu offra ospitalità, servizi professionali o ristorazione,
+                    abbiamo il sistema esatto per farti dominare la tua provincia.</p>
+                <div class="divider bg-sea mx-auto"></div>
             </div>
-        </section>
+            <div class="cards-grid">
 
-        <!-- ====================================================
-             PACCHETTI
-             ==================================================== -->
-        <section class="packages section-muted" id="servizi" aria-labelledby="servizi-title">
-            <div class="container packages-container">
-                <div class="text-center mb-5">
-                    <h2 id="servizi-title">Le colonne portanti dell'economia abruzzese. Le nostre soluzioni.</h2>
-                    <p class="subtitle text-dark mx-auto">Che tu offra ospitalità, servizi professionali o ristorazione,
-                        abbiamo il sistema esatto per farti dominare la tua provincia.</p>
-                    <div class="divider bg-sea mx-auto" aria-hidden="true"></div>
-                </div>
-                <div class="cards-grid">
-
-                    <div class="card premium-card">
-                        <div class="card-header">
-                            <i data-lucide="umbrella" class="card-icon" aria-hidden="true"></i>
-                            <h3>Pacchetto "Lido Premium"</h3>
-                            <span class="card-target">Per Stabilimenti Balneari</span>
+                <!-- Card 1: Stabilimenti Balneari — accento sea blue -->
+                <div class="card card-lido">
+                    <div class="card-header">
+                        <div class="card-icon-wrap">
+                            <i data-lucide="umbrella" class="card-icon"></i>
                         </div>
-                        <div class="card-body">
-                            <ul class="benefit-list list-navy" aria-label="Benefici del pacchetto Lido Premium">
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Sito mobile-first ad alta velocità</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Menu e prenotazione ombrelloni online</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Social "Effetto FOMO" (Instagram/TikTok)</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Local SEO per intercettare i turisti sulla costa</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#configuratore" class="btn btn-navy w-100"
-                               aria-label="Scopri il pacchetto Lido Premium">Scopri il pacchetto</a>
-                        </div>
+                        <span class="card-target">Per Stabilimenti Balneari</span>
+                        <h3>Pacchetto "Lido Premium"</h3>
                     </div>
-
-                    <div class="card hill-card">
-                        <div class="card-header">
-                            <i data-lucide="home" class="card-icon text-white" aria-hidden="true"></i>
-                            <h3 class="text-white">Pacchetto "Ospitalità Autentica"</h3>
-                            <span class="card-target text-white">Per Agriturismi e Strutture Ricettive</span>
-                        </div>
-                        <div class="card-body text-white">
-                            <ul class="benefit-list list-white" aria-label="Benefici del pacchetto Ospitalità Autentica">
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Sito web emozionale</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Disintermediazione diretta (zero commissioni a Booking)</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Social Storytelling del territorio</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Ads per destagionalizzare e riempire la bassa stagione</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#configuratore" class="btn btn-white w-100"
-                               aria-label="Scopri il pacchetto Ospitalità Autentica">Scopri il pacchetto</a>
-                        </div>
-                    </div>
-
-                    <div class="card navy-card">
-                        <div class="card-header">
-                            <i data-lucide="award" class="card-icon text-gold" aria-hidden="true"></i>
-                            <h3 class="text-white">Pacchetto "Studio Autorevole"</h3>
-                            <span class="card-target text-white">Per Studi Medici, Agenzie e Professionisti</span>
-                        </div>
-                        <div class="card-body text-white">
-                            <ul class="benefit-list list-white" aria-label="Benefici del pacchetto Studio Autorevole">
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Sito web orientato alla Lead Generation</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Local SEO per dominare le ricerche Google</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Social "Authority" per creare fiducia</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Google Ads per intercettare domanda consapevole</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#configuratore" class="btn btn-outline-sea-light w-100"
-                               aria-label="Scopri il pacchetto Studio Autorevole">Scopri il pacchetto</a>
-                        </div>
-                    </div>
-
-                    <div class="card mountain-card">
-                        <div class="card-header">
-                            <i data-lucide="utensils" class="card-icon text-white" aria-hidden="true"></i>
-                            <h3 class="text-white">Pacchetto "Tavola d'Eccellenza"</h3>
-                            <span class="card-target text-white">Per Ristoranti, Bar e Locali</span>
-                        </div>
-                        <div class="card-body text-white">
-                            <ul class="benefit-list list-white" aria-label="Benefici del pacchetto Tavola d'Eccellenza">
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Sito con Menu digitale e prenotazione diretta (zero TheFork)</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Local SEO e Reputation (Tripadvisor/Google)</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Social "Food Experience"</li>
-                                <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Ads per riempire i tavoli infrasettimanali</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#configuratore" class="btn btn-white-mountain w-100"
-                               aria-label="Scopri il pacchetto Tavola d'Eccellenza">Scopri il pacchetto</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ====================================================
-             CHI SIAMO
-             ==================================================== -->
-        <section class="about section-light" id="chi-siamo" aria-labelledby="about-title">
-            <div class="container about-container">
-                <div class="about-image">
-                    <!-- lazy loading: immagine sotto la fold -->
-                    <img src="pontedelmare.jpg"
-                         alt="Ponte del Mare a Pescara, simbolo del territorio abruzzese"
-                         class="rounded-image shadow-large"
-                         loading="lazy"
-                         decoding="async">
-                    <div class="experience-badge" aria-label="100% abruzzesi">
-                        <span class="number" aria-hidden="true">100%</span>
-                        <span class="text" aria-hidden="true">Abruzzesi</span>
-                    </div>
-                </div>
-                <div class="about-content">
-                    <span class="badge badge-mountain mb-2">Il Vantaggio Locale</span>
-                    <h2 id="about-title">Siamo di Pescara. Conosciamo il tuo mare, la tua terra e i tuoi clienti.</h2>
-                    <div class="divider bg-mountain" aria-hidden="true"></div>
-                    <p>Non siamo un'agenzia fredda e lontana. Parliamo la tua stessa lingua e sappiamo cosa significa
-                        fare impresa in Abruzzo.</p>
-                    <p>Ti diamo le strategie delle grandi multinazionali, applicate alla tua realtà locale.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ====================================================
-             LEAD MAGNET — risorsa gratuita per cattura email
-             ==================================================== -->
-        <section class="lead-magnet" id="checklist" aria-labelledby="lm-title">
-            <div class="container">
-                <div class="lead-magnet-inner">
-                    <div class="lead-magnet-content">
-                        <span class="badge badge-hill-solid">Risorsa Gratuita</span>
-                        <h2 id="lm-title">Non sei ancora pronto per il sito?</h2>
-                        <p>Scarica la nostra <strong>Checklist SEO 2025</strong> — 20 punti concreti per capire quanto
-                            è visibile la tua attività su Google. Completamente gratis.</p>
-                        <ul class="lm-feature-list" aria-label="Cosa include la checklist">
-                            <li><i data-lucide="check" aria-hidden="true"></i> Audit velocità e performance</li>
-                            <li><i data-lucide="check" aria-hidden="true"></i> Ottimizzazione Google My Business</li>
-                            <li><i data-lucide="check" aria-hidden="true"></i> Checklist parole chiave locali</li>
+                    <div class="card-body">
+                        <ul class="benefit-list">
+                            <li><i data-lucide="check-circle-2"></i> Sito mobile-first ad alta velocità</li>
+                            <li><i data-lucide="check-circle-2"></i> Menu e prenotazione ombrelloni online</li>
+                            <li><i data-lucide="check-circle-2"></i> Social "Effetto FOMO" (Instagram/TikTok)</li>
+                            <li><i data-lucide="check-circle-2"></i> Local SEO per intercettare i turisti sulla costa</li>
                         </ul>
                     </div>
-                    <div class="lead-magnet-form-area">
-                        <div class="lm-card">
-                            <p class="lm-card-label">Ricevila subito via email</p>
-                            <div class="form-group">
-                                <label for="lm-email" class="sr-only">La tua email aziendale</label>
-                                <input type="email" id="lm-email"
-                                       placeholder="La tua email aziendale"
-                                       aria-label="Inserisci la tua email per ricevere la checklist SEO gratuita"
-                                       aria-required="true"
-                                       autocomplete="email">
-                            </div>
-                            <button type="button" class="btn btn-hill" id="lmBtn"
-                                    aria-label="Ricevi la Checklist SEO gratuita via email">
-                                <i data-lucide="download" aria-hidden="true"></i>
-                                Ricevi la Checklist Gratis
-                            </button>
-                            <div class="lm-success" id="lmSuccess" role="alert" aria-live="assertive">
-                                <i data-lucide="check-circle" aria-hidden="true"></i>
-                                Ottimo! Controlla la tua email tra pochi minuti.
-                            </div>
-                            <p class="lm-privacy">
-                                <i data-lucide="lock" aria-hidden="true"></i>
-                                Nessuno spam. Privacy garantita. Disiscrizione in un click.
-                            </p>
-                        </div>
+                    <div class="card-footer">
+                        <a href="#configuratore" class="btn btn-primary w-100">Scopri il pacchetto →</a>
                     </div>
+                </div>
+
+                <!-- Card 2: Agriturismi — accento hill green -->
+                <div class="card card-ospital">
+                    <div class="card-header">
+                        <div class="card-icon-wrap">
+                            <i data-lucide="home" class="card-icon"></i>
+                        </div>
+                        <span class="card-target">Per Agriturismi e Strutture Ricettive</span>
+                        <h3>Pacchetto "Ospitalità Autentica"</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="benefit-list">
+                            <li><i data-lucide="check-circle-2"></i> Sito web emozionale e storytelling visivo</li>
+                            <li><i data-lucide="check-circle-2"></i> Disintermediazione diretta (zero commissioni a Booking)</li>
+                            <li><i data-lucide="check-circle-2"></i> Social Storytelling del territorio</li>
+                            <li><i data-lucide="check-circle-2"></i> Ads per destagionalizzare e riempire la bassa stagione</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#configuratore" class="btn btn-primary w-100">Scopri il pacchetto →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Professionisti — accento oro -->
+                <div class="card card-studio">
+                    <div class="card-header">
+                        <div class="card-icon-wrap">
+                            <i data-lucide="award" class="card-icon"></i>
+                        </div>
+                        <span class="card-target">Per Studi Medici, Agenzie e Professionisti</span>
+                        <h3>Pacchetto "Studio Autorevole"</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="benefit-list">
+                            <li><i data-lucide="check-circle-2"></i> Sito web orientato alla Lead Generation</li>
+                            <li><i data-lucide="check-circle-2"></i> Local SEO per dominare le ricerche Google</li>
+                            <li><i data-lucide="check-circle-2"></i> Social "Authority" per creare fiducia</li>
+                            <li><i data-lucide="check-circle-2"></i> Google Ads per intercettare domanda consapevole</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#configuratore" class="btn btn-primary w-100">Scopri il pacchetto →</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Ristorazione — accento mountain -->
+                <div class="card card-tavola">
+                    <div class="card-header">
+                        <div class="card-icon-wrap">
+                            <i data-lucide="utensils" class="card-icon"></i>
+                        </div>
+                        <span class="card-target">Per Ristoranti, Bar e Locali</span>
+                        <h3>Pacchetto "Tavola d'Eccellenza"</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="benefit-list">
+                            <li><i data-lucide="check-circle-2"></i> Sito con Menu digitale e prenotazione diretta (zero TheFork)</li>
+                            <li><i data-lucide="check-circle-2"></i> Local SEO e Reputation (Tripadvisor/Google)</li>
+                            <li><i data-lucide="check-circle-2"></i> Social "Food Experience"</li>
+                            <li><i data-lucide="check-circle-2"></i> Ads per riempire i tavoli infrasettimanali</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#configuratore" class="btn btn-primary w-100">Scopri il pacchetto →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         CHI SIAMO
+         ==================================================== -->
+    <section class="about section-light" id="chi-siamo">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="pontedelmare.jpg" alt="Ponte del Mare - Pescara" class="rounded-image shadow-large">
+                <div class="experience-badge">
+                    <span class="number">100%</span>
+                    <span class="text">Abruzzesi</span>
                 </div>
             </div>
-        </section>
-
-        <!-- ====================================================
-             FAQ — domande frequenti con accordion
-             ==================================================== -->
-        <section class="faq section-light" id="faq" aria-labelledby="faq-title">
-            <div class="container faq-container">
-                <div class="text-center mb-5">
-                    <span class="badge badge-sea-solid">Risposte Rapide</span>
-                    <h2 id="faq-title">Domande Frequenti</h2>
-                    <div class="divider bg-sea mx-auto" aria-hidden="true"></div>
-                </div>
-
-                <div class="faq-list">
-
-                    <div class="faq-item">
-                        <button class="faq-question"
-                                id="faq-btn-1"
-                                aria-expanded="false"
-                                aria-controls="faq-ans-1">
-                            <span>Quanto costa un sito web professionale?</span>
-                            <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1">
-                            <div class="faq-answer-inner">
-                                <p>Il costo dipende dalla complessità del progetto. Una <strong>Landing Page</strong> parte da €800, un <strong>Sito Vetrina</strong> da €1.500, mentre un <strong>E-commerce</strong> parte da €3.000. Ogni preventivo è personalizzato e gratuito: usa il configuratore per ricevere la tua stima in 24 ore, senza impegno.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question"
-                                id="faq-btn-2"
-                                aria-expanded="false"
-                                aria-controls="faq-ans-2">
-                            <span>Quanto tempo ci vuole per realizzare un sito?</span>
-                            <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2">
-                            <div class="faq-answer-inner">
-                                <p>I tempi variano in base al tipo di progetto. Una Landing Page è online in <strong>1–2 settimane</strong>. Un Sito Vetrina completo richiede circa <strong>3–4 settimane</strong>. Un E-commerce o un portale può richiedere dai <strong>4 ai 8 settimane</strong>. Lavoriamo in modo trasparente con aggiornamenti settimanali sull'avanzamento.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question"
-                                id="faq-btn-3"
-                                aria-expanded="false"
-                                aria-controls="faq-ans-3">
-                            <span>Offrite assistenza e manutenzione dopo il lancio?</span>
-                            <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
-                            <div class="faq-answer-inner">
-                                <p>Sì, assolutamente. Proponiamo piani di <strong>manutenzione mensili</strong> che includono aggiornamenti di sicurezza, backup automatici, modifiche ai contenuti e monitoraggio delle performance. Il tuo sito non è un progetto "consegnato e dimenticato": è un asset che facciamo crescere insieme a te.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question"
-                                id="faq-btn-4"
-                                aria-expanded="false"
-                                aria-controls="faq-ans-4">
-                            <span>Il sito sarà ottimizzato per mobile e per Google?</span>
-                            <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4">
-                            <div class="faq-answer-inner">
-                                <p>È il nostro standard minimo, non un optional. Realizziamo ogni sito con approccio <strong>mobile-first</strong> (oltre il 70% delle visite arriva da smartphone) e ottimizziamo struttura, velocità e contenuti per il posizionamento su Google. Lavoriamo anche sulla <strong>Local SEO</strong> per farti trovare dalle persone che cercano nella tua zona.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="about-content">
+                <span class="badge badge-mountain mb-2">Il Vantaggio Locale</span>
+                <h2>Siamo di Pescara. Conosciamo il tuo mare, la tua terra e i tuoi clienti.</h2>
+                <div class="divider bg-mountain"></div>
+                <p>Non siamo un'agenzia fredda e lontana. Parliamo la tua stessa lingua e sappiamo cosa significa
+                    fare impresa in Abruzzo.</p>
+                <p>Ti diamo le strategie delle grandi multinazionali, applicate alla tua realtà locale.</p>
             </div>
-        </section>
-
-    </main><!-- /main -->
+        </div>
+    </section>
 
     <!-- ====================================================
          FOOTER / CTA FINALE
@@ -569,8 +408,7 @@
             <h2 class="footer-title">Smetti di guardare gli altri che fanno il tutto esaurito.</h2>
             <p class="footer-subtitle">Il salto di qualità per la tua azienda inizia da qui.</p>
             <div class="footer-cta mt-5">
-                <a href="mailto:info@quotaadriatica.it" class="btn btn-primary btn-large"
-                   aria-label="Invia email a Quota Adriatica per fissare un incontro strategico">
+                <a href="mailto:info@quotaadriatica.it" class="btn btn-primary btn-large">
                     Fissiamo un incontro strategico
                     <span class="small-text">(Senza impegno)</span>
                 </a>
@@ -584,7 +422,7 @@
 
     <script>
         /* ============================================================
-           INIT — inizializza icone Lucide
+           INIT
            ============================================================ */
         lucide.createIcons();
 
@@ -594,29 +432,17 @@
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 60);
-        }, { passive: true });
-
-        /* ============================================================
-           HAMBURGER MENU — con aggiornamento aria-expanded
-           ============================================================ */
-        const hamburger = document.getElementById('hamburger');
-        const navLinks  = document.getElementById('navLinks');
-
-        hamburger.addEventListener('click', () => {
-            const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', String(!isOpen));
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('open');
         });
 
-        /* Chiude il menu se si preme ESC */
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-                hamburger.setAttribute('aria-expanded', 'false');
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('open');
-                hamburger.focus();
-            }
+        /* ============================================================
+           HAMBURGER MENU
+           ============================================================ */
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
         });
 
         /* ============================================================
@@ -625,7 +451,6 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                hamburger.setAttribute('aria-expanded', 'false');
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('open');
                 const target = document.querySelector(this.getAttribute('href'));
@@ -640,46 +465,43 @@
         const TOTALE_STEP = 3;
         const selezioni = { tipo: null, stile: null };
 
-        const prevBtn   = document.getElementById('prevBtn');
-        const nextBtn   = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
         const configNav = document.getElementById('configNav');
 
+        // Stato iniziale pulsanti
         prevBtn.style.display = 'none';
 
-        /* Selezione card — click e tastiera (Enter/Space) */
+        // Selezione card opzione con avanzamento automatico
         document.querySelectorAll('.option-card').forEach(card => {
-            const attiva = () => {
+            card.addEventListener('click', () => {
                 const step = card.dataset.step;
-                document.querySelectorAll(`.option-card[data-step="${step}"]`).forEach(c => {
-                    c.classList.remove('selected');
-                    c.setAttribute('aria-pressed', 'false');
-                });
+                document.querySelectorAll(`.option-card[data-step="${step}"]`)
+                    .forEach(c => c.classList.remove('selected'));
                 card.classList.add('selected');
-                card.setAttribute('aria-pressed', 'true');
 
-                if (step === '1') selezioni.tipo  = card.dataset.value;
+                if (step === '1') selezioni.tipo = card.dataset.value;
                 if (step === '2') selezioni.stile = card.dataset.value;
 
+                // Avanzamento automatico dopo micro-delay per mostrare selezione
                 setTimeout(() => {
                     if (stepCorrente < TOTALE_STEP) avanzaStep();
                 }, 380);
-            };
-
-            card.addEventListener('click', attiva);
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); attiva(); }
             });
         });
 
         nextBtn.addEventListener('click', () => {
-            if (stepCorrente === TOTALE_STEP) inviaForm();
-            else avanzaStep();
+            if (stepCorrente === TOTALE_STEP) {
+                inviaForm();
+            } else {
+                avanzaStep();
+            }
         });
 
         prevBtn.addEventListener('click', tornaStep);
 
         function avanzaStep() { mostraStep(stepCorrente + 1); }
-        function tornaStep()  { mostraStep(stepCorrente - 1); }
+        function tornaStep() { mostraStep(stepCorrente - 1); }
 
         function mostraStep(nuovoStep) {
             document.getElementById(`step-${stepCorrente}`).classList.remove('active');
@@ -690,8 +512,6 @@
             aggiornaIndicatori();
             prevBtn.style.display = stepCorrente > 1 ? 'inline-flex' : 'none';
             nextBtn.textContent = stepCorrente === TOTALE_STEP ? 'Invia Richiesta ✉' : 'Avanti →';
-            nextBtn.setAttribute('aria-label', stepCorrente === TOTALE_STEP
-                ? 'Invia la tua richiesta' : 'Prosegui allo step successivo');
         }
 
         function aggiornaIndicatori() {
@@ -699,7 +519,7 @@
                 const n = parseInt(pill.dataset.step);
                 pill.classList.remove('active', 'completed');
                 if (n === stepCorrente) pill.classList.add('active');
-                if (n < stepCorrente)   pill.classList.add('completed');
+                if (n < stepCorrente) pill.classList.add('completed');
             });
             document.querySelectorAll('.step-connector').forEach((conn, i) => {
                 conn.classList.toggle('completed', i < stepCorrente - 1);
@@ -707,85 +527,38 @@
         }
 
         function inviaForm() {
-            const nome  = document.getElementById('config-nome').value.trim();
+            const nome = document.getElementById('config-nome').value.trim();
             const email = document.getElementById('config-email').value.trim();
-            let valido  = true;
 
-            if (!nome)  { document.getElementById('config-nome').classList.add('input-error');  valido = false; }
+            // Validazione campi obbligatori
+            let valido = true;
+            if (!nome) { document.getElementById('config-nome').classList.add('input-error'); valido = false; }
             if (!email) { document.getElementById('config-email').classList.add('input-error'); valido = false; }
             if (!valido) return;
 
-            const note    = document.getElementById('config-note').value;
+            const note = document.getElementById('config-note').value;
             const oggetto = encodeURIComponent(`Configuratore - ${selezioni.tipo || 'Non specificato'} | ${nome}`);
-            const corpo   = encodeURIComponent(
-                `Nome: ${nome}\nEmail: ${email}\nTipo sito: ${selezioni.tipo || 'N/D'}\nStile: ${selezioni.stile || 'N/D'}\nNote: ${note}`
+            const corpo = encodeURIComponent(
+                `Nome: ${nome}\nEmail: ${email}\nTipo sito: ${selezioni.tipo || 'Non specificato'}\nStile: ${selezioni.stile || 'Non specificato'}\nNote: ${note}`
             );
             window.location.href = `mailto:info@quotaadriatica.it?subject=${oggetto}&body=${corpo}`;
 
+            // Mostra successo
             document.getElementById(`step-${stepCorrente}`).classList.remove('active');
             document.getElementById('step-success').classList.add('active');
             configNav.style.display = 'none';
-
             document.querySelectorAll('.step-pill').forEach(p => {
-                p.classList.remove('active'); p.classList.add('completed');
+                p.classList.remove('active');
+                p.classList.add('completed');
             });
             document.querySelectorAll('.step-connector').forEach(c => c.classList.add('completed'));
         }
 
+        // Rimuove errore mentre l'utente digita
         ['config-nome', 'config-email'].forEach(id => {
             document.getElementById(id).addEventListener('input', function () {
                 this.classList.remove('input-error');
             });
-        });
-
-        /* ============================================================
-           FAQ ACCORDION
-           ============================================================ */
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const item     = btn.closest('.faq-item');
-                const isOpen   = item.classList.contains('open');
-
-                /* Chiude tutti gli altri item */
-                document.querySelectorAll('.faq-item.open').forEach(el => {
-                    el.classList.remove('open');
-                    el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-                });
-
-                /* Apre/chiude quello cliccato */
-                if (!isOpen) {
-                    item.classList.add('open');
-                    btn.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
-
-        /* ============================================================
-           LEAD MAGNET — form email con validazione
-           ============================================================ */
-        document.getElementById('lmBtn').addEventListener('click', () => {
-            const input   = document.getElementById('lm-email');
-            const success = document.getElementById('lmSuccess');
-            const email   = input.value.trim();
-            const valid   = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-            if (!valid) {
-                input.classList.add('input-error');
-                input.focus();
-                return;
-            }
-
-            const oggetto = encodeURIComponent('Richiesta Checklist SEO 2025 — Quota Adriatica');
-            const corpo   = encodeURIComponent(`Ciao,\n\nVorrei ricevere la Checklist SEO 2025 gratuita.\n\nEmail: ${email}`);
-            window.location.href = `mailto:info@quotaadriatica.it?subject=${oggetto}&body=${corpo}`;
-
-            input.style.display = 'none';
-            document.getElementById('lmBtn').style.display = 'none';
-            success.style.display = 'flex';
-        });
-
-        document.getElementById('lm-email').addEventListener('input', function () {
-            this.classList.remove('input-error');
         });
     </script>
 </body>
