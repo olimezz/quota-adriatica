@@ -544,6 +544,8 @@ p  { margin-bottom: 1rem; }
     flex-direction: column;
     align-items: center;
     gap: 2px;
+    flex: 1;
+    text-align: center;
 }
 
 .proof-item strong {
@@ -1285,6 +1287,7 @@ p  { margin-bottom: 1rem; }
         justify-content: center;
     }
 
+    .proof-item { flex: none; }
     .proof-divider { display: none; }
 
     /* Configuratore mobile */
