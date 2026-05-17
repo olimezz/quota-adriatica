@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servizi e Prezzi | Quota Adriatica</title>
+    <meta name="description" content="Piani e prezzi per Sviluppo Web e Social Media Management. Soluzioni digitali per aziende abruzzesi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="servizi.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Quota Adriatica" class="logo-img" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#problema" class="nav-link">Il Problema</a>
+                <a href="#" class="nav-link">Servizi</a>
+                <a href="index.html#chi-siamo" class="nav-link">Chi Siamo</a>
+                <a href="index.html#configuratore" class="btn btn-primary nav-cta-mobile">Inizia Gratis</a>
+            </div>
+            <a href="index.html#configuratore" class="btn btn-primary nav-cta-desktop">Inizia Gratis</a>
+            <button class="hamburger" id="hamburger" aria-label="Apri menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO COMPATTO -->
+    <header class="sv-hero">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grid"></div>
+        <div class="container sv-hero-container">
+            <span class="badge badge-glow">💼 Piani e Prezzi</span>
+            <h1 class="sv-hero-title">
+                Soluzioni su misura per<br>
+                <span class="text-gradient-sea">le aziende abruzzesi</span>
+            </h1>
+            <p class="sv-hero-subtitle">Scegli il piano perfetto, senza sorprese. Prezzi chiari, risultati misurabili.</p>
+        </div>
+        <div class="sv-hero-wave">
+            <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,60 L0,60 Z" fill="#080f22"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- SEZIONE SERVIZI -->
+    <main class="sv-main">
+        <div class="container">
+
+            <!-- ============================================================
+                 MACRO-CARD: SVILUPPO WEB
+                 ============================================================ -->
+            <div class="macro-card" id="macro-web">
+                <div class="macro-card-header" id="header-web" role="button" tabindex="0" aria-expanded="false">
+                    <div class="macro-icon macro-icon-web">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <div class="macro-card-info">
+                        <span class="macro-label">UNA TANTUM</span>
+                        <h2 class="macro-title">Sviluppo Web</h2>
+                    </div>
+                    <div class="macro-card-actions">
+                        <span class="macro-count">3 piani disponibili</span>
+                        <button class="btn-scopri" aria-label="Mostra piani Sviluppo Web">
+                            Scopri Piani
+                            <div class="macro-toggle" id="toggle-web">
+                                <i data-lucide="chevron-down"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="plans-container" id="plans-web">
+                    <div class="plans-grid">
+
+                        <!-- Starter -->
+                        <div class="plan-card">
+                            <div class="plan-icon-wrap picon-blue">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <h3 class="plan-name">Starter</h3>
+                            <p class="plan-desc">Ideale per liberi professionisti.</p>
+                            <div class="plan-price plan-price-blue">
+                                <span class="p-currency">€</span>
+                                <span class="p-amount">299</span>
+                            </div>
+                            <p class="price-note">+ 29€/mese</p>
+                            <ul class="plan-features">
+                                <li class="feat-yes"><i data-lucide="check"></i>1 Pagina</li>
+                                <li class="feat-yes"><i data-lucide="check"></i>Hosting Incluso</li>
+                                <li class="feat-yes"><i data-lucide="check"></i>1 Modifica/mese</li>
+                                <li class="feat-no"><i data-lucide="x"></i>SEO non incluso</li>
+                            </ul>
+                            <a href="index.html#configuratore" class="btn-plan">Seleziona Piano</a>
+                        </div>
+
+                        <!-- Business [CONSIGLIATO] -->
+                        <div class="plan-card plan-featured plan-green">
+                            <div class="badge-consigliato bdg-green">CONSIGLIATO</div>
+                            <div class="plan-icon-wrap picon-green">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <h3 class="plan-name">Business</h3>
+                            <p class="plan-desc">Ideale per attività locali.</p>
+                            <div class="plan-price plan-price-green">
+                                <span class="p-currency">€</span>
+                                <span class="p-amount">549</span>
+                            </div>
+                            <p class="price-note">+ 49€/mese</p>
+                            <ul class="plan-features">
+                                <li class="feat-yes feat-green"><i data-lucide="check"></i>Fino a 5 Pagine</li>
+                                <li class="feat-yes feat-green"><i data-lucide="check"></i>SEO Base</li>
+                                <li class="feat-yes feat-green"><i data-lucide="check"></i>3 Modifiche/mese</li>
+                                <li class="feat-yes feat-green"><i data-lucide="check"></i>Hosting Incluso</li>
+                            </ul>
+                            <a href="index.html#configuratore" class="btn-plan btn-plan-green">Seleziona Piano</a>
+                        </div>
+
+                        <!-- Pro -->
+                        <div class="plan-card">
+                            <div class="plan-icon-wrap picon-purple">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <h3 class="plan-name">Pro</h3>
+                            <p class="plan-desc">Ideale per chi vuole il massimo.</p>
+                            <div class="plan-price plan-price-purple">
+                                <span class="p-currency">€</span>
+                                <span class="p-amount">999</span>
+                            </div>
+                            <p class="price-note">+ 79€/mese</p>
+                            <ul class="plan-features">
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Avanzato + Shop</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>SEO Completo</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Modifiche Illimitate</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Hosting Incluso</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Assistenza Prioritaria</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>E-commerce Base</li>
+                            </ul>
+                            <a href="index.html#configuratore" class="btn-plan">Seleziona Piano</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+                 MACRO-CARD: SOCIAL MEDIA MANAGEMENT
+                 ============================================================ -->
+            <div class="macro-card" id="macro-social">
+                <div class="macro-card-header" id="header-social" role="button" tabindex="0" aria-expanded="false">
+                    <div class="macro-icon macro-icon-social">
+                        <i data-lucide="instagram"></i>
+                    </div>
+                    <div class="macro-card-info">
+                        <span class="macro-label">ABBONAMENTO MENSILE</span>
+                        <h2 class="macro-title">Social Media Management</h2>
+                    </div>
+                    <div class="macro-card-actions">
+                        <span class="macro-count">3 piani disponibili</span>
+                        <button class="btn-scopri" aria-label="Mostra piani Social Media">
+                            Scopri Piani
+                            <div class="macro-toggle" id="toggle-social">
+                                <i data-lucide="chevron-down"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="plans-container" id="plans-social">
+                    <div class="plans-grid">
+
+                        <!-- Presenza Base -->
+                        <div class="plan-card">
+                            <div class="plan-icon-wrap picon-blue">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <h3 class="plan-name">Presenza Base</h3>
+                            <p class="plan-desc">Presenza essenziale e costante.</p>
+                            <div class="plan-price plan-price-blue">
+                                <span class="p-currency">€</span>
+                                <span class="p-amount">249</span>
+                                <span class="p-period">/mese</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li class="feat-yes"><i data-lucide="check"></i>1 Piattaforma</li>
+                                <li class="feat-yes"><i data-lucide="check"></i>8 Post/mese</li>
+                                <li class="feat-yes"><i data-lucide="check"></i>4 Stories/settimana</li>
+                            </ul>
+                            <a href="index.html#configuratore" class="btn-plan">Seleziona Piano</a>
+                        </div>
+
+                        <!-- Crescita [CONSIGLIATO] -->
+                        <div class="plan-card plan-featured plan-pink">
+                            <div class="badge-consigliato bdg-pink">CONSIGLIATO</div>
+                            <div class="plan-icon-wrap picon-pink">
+                                <i data-lucide="smartphone"></i>
+                            </div>
+                            <h3 class="plan-name">Crescita</h3>
+                            <p class="plan-desc">Crescita e interazione attiva.</p>
+                            <div class="plan-price plan-price-pink">
+                                <span class="p-currency">€</span>
+                                <span class="p-amount">449</span>
+                                <span class="p-period">/mese</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>2 Piattaforme</li>
+                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>12 Post/mese</li>
+                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>Stories quotidiane</li>
+                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>4 Reels/mese</li>
+                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>1 Uscita in loco</li>
+                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>Report mensile</li>
+                            </ul>
+                            <a href="index.html#configuratore" class="btn-plan btn-plan-pink">Seleziona Piano</a>
+                        </div>
+
+                        <!-- Dominio -->
+                        <div class="plan-card">
+                            <div class="plan-icon-wrap picon-purple">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <h3 class="plan-name">Dominio</h3>
+                            <p class="plan-desc">Autorità assoluta nel settore.</p>
+                            <div class="plan-price plan-price-purple">
+                                <span class="p-currency">€</span>
+                                <span class="p-amount">749</span>
+                                <span class="p-period">/mese</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>3 Piattaforme</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>16+ Post/mese</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Stories quotidiane</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>8 Reels/mese</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>2 Uscite in loco</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Strategia editoriale</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Gestione commenti</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Report mensile</li>
+                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Call mensile</li>
+                            </ul>
+                            <a href="index.html#configuratore" class="btn-plan">Seleziona Piano</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA FINALE -->
+            <div class="sv-cta text-center">
+                <p class="sv-cta-label">Non sai quale piano fa per te?</p>
+                <a href="index.html#configuratore" class="btn-hero-cta">
+                    <span class="cta-icon"><i data-lucide="rocket"></i></span>
+                    Configura la tua soluzione
+                    <span class="cta-arrow">→</span>
+                </a>
+                <p class="cta-sub">Gratis · Senza impegno · Risposta in 24h</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 10);
+        }, { passive: true });
+
+        // Hamburger
+        document.getElementById('hamburger').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+
+        // Accordion toggle con stagger animation
+        function togglePlans(type) {
+            const container = document.getElementById('plans-' + type);
+            const toggle   = document.getElementById('toggle-' + type);
+            const header   = document.getElementById('header-' + type);
+            const macro    = document.getElementById('macro-' + type);
+            const isOpen   = container.classList.contains('open');
+
+            container.classList.toggle('open');
+            toggle.classList.toggle('rotated');
+            macro.classList.toggle('expanded');
+            header.setAttribute('aria-expanded', !isOpen);
+
+            if (!isOpen) {
+                // Animate plan cards in with stagger
+                const cards = container.querySelectorAll('.plan-card');
+                cards.forEach((card, i) => {
+                    card.classList.remove('animated');
+                    card.style.animationDelay = '';
+                    void card.offsetWidth; // force reflow
+                    card.style.animationDelay = (i * 0.09) + 's';
+                    card.classList.add('animated');
+                });
+            }
+        }
+
+        // Bind click + keyboard on headers
+        ['web', 'social'].forEach(type => {
+            const header = document.getElementById('header-' + type);
+            header.addEventListener('click', () => togglePlans(type));
+            header.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePlans(type); }
+            });
+        });
+    </script>
+
+</body>
+</html>

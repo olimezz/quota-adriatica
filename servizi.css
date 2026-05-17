@@ -1,0 +1,408 @@
+/* ============================================================
+   SERVIZI PAGE — dark-modern pricing system
+   Eredita variabili da style.css (--navy, --sea, --white, ecc.)
+   ============================================================ */
+
+/* ── Hero compatto ─────────────────────────────────────────── */
+.sv-hero {
+    min-height: 44vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 140px 0 80px;
+    background:
+        radial-gradient(ellipse at 75% 40%, rgba(38,135,186,0.28) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 80%, rgba(14,60,100,0.5)  0%, transparent 50%),
+        linear-gradient(150deg,
+            #050c1e 0%,
+            #0c1a3a 20%,
+            #092638 45%,
+            #0d3d5a 68%,
+            #080f22 100%
+        );
+}
+
+.sv-hero-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sv-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.sv-hero-subtitle {
+    font-size: clamp(0.98rem, 1.5vw, 1.12rem);
+    color: rgba(255,255,255,0.62);
+    font-weight: 300;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.sv-hero-wave {
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    z-index: 3;
+    line-height: 0;
+}
+.sv-hero-wave svg { width: 100%; height: 60px; display: block; }
+
+/* ── Main background ────────────────────────────────────────── */
+.sv-main {
+    background: linear-gradient(180deg, #080f22 0%, #0a1428 100%);
+    padding: 56px 0 100px;
+}
+
+/* ── Macro-card (accordion container) ──────────────────────── */
+.macro-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.macro-card.expanded {
+    border-color: rgba(38,135,186,0.22);
+    box-shadow: 0 0 0 1px rgba(38,135,186,0.1), 0 24px 60px rgba(8,15,34,0.5);
+}
+
+/* Header cliccabile */
+.macro-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 26px 32px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.25s ease;
+}
+.macro-card-header:hover { background: rgba(38,135,186,0.05); }
+.macro-card-header:focus-visible {
+    outline: 2px solid var(--sea);
+    outline-offset: -2px;
+}
+
+/* Icon */
+.macro-icon {
+    width: 54px; height: 54px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.macro-icon i { width: 26px; height: 26px; }
+
+.macro-icon-web {
+    background: rgba(38,135,186,0.15);
+    border: 1px solid rgba(38,135,186,0.3);
+    color: #7dd3f0;
+}
+.macro-icon-social {
+    background: rgba(236,72,153,0.15);
+    border: 1px solid rgba(236,72,153,0.3);
+    color: #f9a8d4;
+}
+
+.macro-card-info { flex: 1; min-width: 0; }
+
+.macro-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.macro-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+    color: var(--white);
+    letter-spacing: -0.4px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.macro-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.macro-count {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.35);
+    white-space: nowrap;
+}
+
+/* "Scopri Piani" button */
+.btn-scopri {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(38,135,186,0.1);
+    border: 1px solid rgba(38,135,186,0.25);
+    border-radius: 50px;
+    color: #7dd3f0;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+    white-space: nowrap;
+}
+.btn-scopri:hover {
+    background: rgba(38,135,186,0.18);
+    border-color: rgba(38,135,186,0.45);
+}
+
+/* Chevron */
+.macro-toggle {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.38s cubic-bezier(0.34,1.56,0.64,1);
+    flex-shrink: 0;
+}
+.macro-toggle i { width: 14px; height: 14px; color: rgba(255,255,255,0.7); }
+.macro-toggle.rotated { transform: rotate(180deg); }
+
+/* ── Plans accordion ────────────────────────────────────────── */
+.plans-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.plans-container.open { max-height: 1400px; }
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 4px 28px 32px;
+}
+
+/* ── Plan card ──────────────────────────────────────────────── */
+.plan-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+}
+
+.plan-card.animated {
+    animation: planFadeUp 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+@keyframes planFadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.plan-card:hover {
+    border-color: rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.07);
+}
+
+/* Featured card */
+.plan-featured.plan-green {
+    border-color: rgba(34,197,94,0.4);
+    background: rgba(34,197,94,0.05);
+    box-shadow: 0 0 0 1px rgba(34,197,94,0.15), 0 20px 50px rgba(0,0,0,0.25);
+}
+.plan-featured.plan-pink {
+    border-color: rgba(236,72,153,0.4);
+    background: rgba(236,72,153,0.05);
+    box-shadow: 0 0 0 1px rgba(236,72,153,0.15), 0 20px 50px rgba(0,0,0,0.25);
+}
+.plan-featured.plan-green:hover { box-shadow: 0 0 0 1px rgba(34,197,94,0.5), 0 24px 60px rgba(34,197,94,0.12); }
+.plan-featured.plan-pink:hover  { box-shadow: 0 0 0 1px rgba(236,72,153,0.5), 0 24px 60px rgba(236,72,153,0.12); }
+
+/* CONSIGLIATO badge */
+.badge-consigliato {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    white-space: nowrap;
+    color: #fff;
+}
+.bdg-green { background: #22c55e; }
+.bdg-pink  { background: #ec4899; }
+
+/* Icon wraps */
+.plan-icon-wrap {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+.plan-icon-wrap i { width: 24px; height: 24px; }
+
+.picon-blue   { background: rgba(38,135,186,0.15); border: 1px solid rgba(38,135,186,0.25); color: #7dd3f0; }
+.picon-green  { background: rgba(34,197,94,0.15);  border: 1px solid rgba(34,197,94,0.25);  color: #86efac; }
+.picon-pink   { background: rgba(236,72,153,0.15); border: 1px solid rgba(236,72,153,0.25); color: #f9a8d4; }
+.picon-purple { background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.25); color: #c4b5fd; }
+
+/* Name & description */
+.plan-name {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--white);
+    margin-bottom: 4px;
+    letter-spacing: -0.2px;
+}
+
+.plan-desc {
+    font-size: 0.87rem;
+    color: rgba(255,255,255,0.42);
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+/* Price */
+.plan-price {
+    display: flex;
+    align-items: flex-end;
+    gap: 1px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.p-currency { font-size: 1.35rem; font-weight: 700; margin-bottom: 7px; }
+.p-amount   { font-size: 3rem; font-weight: 800; font-family: var(--font-heading); line-height: 1; }
+.p-period   { font-size: 0.85rem; color: rgba(255,255,255,0.45); margin-bottom: 9px; margin-left: 2px; }
+
+.plan-price-blue   .p-currency, .plan-price-blue   .p-amount { color: #7dd3f0; }
+.plan-price-green  .p-currency, .plan-price-green  .p-amount { color: #86efac; }
+.plan-price-pink   .p-currency, .plan-price-pink   .p-amount { color: #f9a8d4; }
+.plan-price-purple .p-currency, .plan-price-purple .p-amount { color: #c4b5fd; }
+
+.price-note {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 20px;
+}
+
+/* Features */
+.plan-features {
+    list-style: none;
+    flex-grow: 1;
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.87rem;
+}
+.plan-features i { width: 15px; height: 15px; flex-shrink: 0; }
+
+.feat-yes         { color: rgba(255,255,255,0.72); }
+.feat-yes i       { color: rgba(255,255,255,0.45); }
+.feat-no          { color: rgba(255,255,255,0.28); text-decoration: line-through; }
+.feat-no  i       { color: rgba(255,255,255,0.18); }
+.feat-green i     { color: #86efac; }
+.feat-pink  i     { color: #f9a8d4; }
+.feat-purple i    { color: #c4b5fd; }
+
+/* Plan CTA */
+.btn-plan {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.93rem;
+    text-decoration: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.65);
+    border: 1px solid rgba(255,255,255,0.11);
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    margin-top: auto;
+}
+.btn-plan:hover {
+    background: rgba(255,255,255,0.13);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-plan-green {
+    background: #22c55e; color: #fff; border-color: #22c55e;
+}
+.btn-plan-green:hover {
+    background: #16a34a; border-color: #16a34a; color: #fff;
+    box-shadow: 0 8px 24px rgba(34,197,94,0.32);
+}
+
+.btn-plan-pink {
+    background: #ec4899; color: #fff; border-color: #ec4899;
+}
+.btn-plan-pink:hover {
+    background: #db2777; border-color: #db2777; color: #fff;
+    box-shadow: 0 8px 24px rgba(236,72,153,0.32);
+}
+
+/* ── CTA finale ─────────────────────────────────────────────── */
+.sv-cta {
+    margin-top: 56px;
+    padding-top: 56px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.sv-cta-label {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.5rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .plans-grid { grid-template-columns: 1fr; gap: 16px; }
+    .plans-container.open { max-height: 3200px; }
+    .macro-count { display: none; }
+}
+
+@media (max-width: 640px) {
+    .macro-card-header { padding: 18px 20px; gap: 12px; }
+    .plans-grid { padding: 0 16px 24px; }
+    .macro-title { font-size: 1.1rem; }
+    .macro-icon { width: 44px; height: 44px; border-radius: 12px; }
+    .macro-icon i { width: 22px; height: 22px; }
+    .btn-scopri { padding: 8px 14px; font-size: 0.82rem; }
+    .sv-hero { padding: 110px 0 60px; }
+}
