@@ -565,6 +565,21 @@ p  { margin-bottom: 1rem; }
     background: rgba(255,255,255,0.14);
 }
 
+.proof-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proof-logo-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Onda SVG in fondo alla hero */
 .hero-wave {
     position: absolute;
