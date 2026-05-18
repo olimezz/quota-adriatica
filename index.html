@@ -1,465 +1,541 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quota Adriatica | Siti Web ad Alta Conversione - Pescara</title>
-    <meta name="description"
-        content="Siti web ad alta conversione e Social Media Management per portare le aziende abruzzesi in Serie A. Quota Adriatica, Pescara.">
+    <title>Quota Adriatica · Studio Digitale per l'Abruzzo che vuole emergere</title>
+    <meta name="description" content="Siti web ad alta conversione e Social Media Management per portare le aziende abruzzesi al vertice del loro mercato. Studio digitale a Pescara.">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Vercel Web Analytics -->
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
 </head>
+<body data-screen-label="01 Home">
 
-<body>
-
-    <!-- ====================================================
-         NAVBAR — glassmorphism su scroll
-         ==================================================== -->
+    <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
     <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <img src="logo.png" alt="Quota Adriatica" class="logo-img" onerror="this.style.display='none'">
-            </div>
+        <div class="container nav-row">
+            <a href="index.html" class="brand" data-comment-anchor="brand">
+                <img src="emblem.png" alt="Quota Adriatica" class="brand-mark">
+                <span class="brand-word">
+                    <span class="one">Quota</span>
+                    <span class="two">Adriatica</span>
+                </span>
+            </a>
             <div class="nav-links" id="navLinks">
                 <a href="#configuratore" class="nav-link">Configura</a>
                 <a href="#problema" class="nav-link">Il Problema</a>
                 <a href="#servizi" class="nav-link">Soluzioni</a>
-                <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
-                <a href="#configuratore" class="btn btn-primary nav-cta-mobile">Inizia Gratis</a>
+                <a href="#chi-siamo" class="nav-link">Studio</a>
+                <a href="servizi.html" class="nav-link">Piani &amp; Prezzi</a>
             </div>
-            <a href="#configuratore" class="btn btn-primary nav-cta-desktop">Inizia Gratis</a>
-            <button class="hamburger" id="hamburger" aria-label="Apri menu">
+            <a href="#configuratore" class="nav-cta">Inizia <span>→</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- ====================================================
-         HERO — gradiente adriatico animato
-         ==================================================== -->
-    <header class="hero">
-        <!-- Sfere luminose animate -->
-        <div class="hero-orb hero-orb-1"></div>
-        <div class="hero-orb hero-orb-2"></div>
-        <div class="hero-orb hero-orb-3"></div>
-        <!-- Griglia decorativa sottile -->
-        <div class="hero-grid"></div>
+    <!-- ============================================================
+         HERO — editoriale, emblema a destra
+         ============================================================ -->
+    <header class="hero" data-screen-label="Hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <div class="hero-meta">
+                    <span class="dot"></span>
+                    <span>Studio Digitale · Pescara, Abruzzo</span>
+                    <span>·</span>
+                    <span>Est. 2025</span>
+                </div>
 
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="badge badge-glow">🌊 Agenzia Web &amp; Social — Pescara, Abruzzo</span>
-
-                <h1 class="hero-title">
-                    Il tuo sito web deve
-                    <span class="text-gradient-sea">vendere,</span><br>
-                    non esistere soltanto.
+                <h1>
+                    Il tuo sito non deve<br>
+                    <span class="underlined">esistere.</span>
+                    <span class="accent">Deve vendere.</span>
                 </h1>
 
-                <p class="hero-subtitle">
-                    Trasformiamo la tua presenza digitale in un motore di clienti. Siti veloci,
-                    strategie social e SEO locale per le aziende abruzzesi che vogliono dominare il loro mercato.
+                <p class="hero-sub">
+                    Trasformiamo la presenza digitale delle aziende abruzzesi in un sistema che intercetta,
+                    convince e converte. Siti veloci, social impeccabili, SEO locale dominante.
                 </p>
 
-                <!-- CTA primaria gigante -->
-                <a href="#configuratore" class="btn-hero-cta" id="ctaHero">
-                    <span class="cta-icon"><i data-lucide="rocket"></i></span>
-                    Inizia a progettare il tuo sito
-                    <span class="cta-arrow">→</span>
-                </a>
-                <p class="cta-sub">Gratis · Senza impegno · Risposta in 24h</p>
+                <div class="hero-actions">
+                    <a href="#configuratore" class="btn btn-primary btn-lg">
+                        Progetta il tuo sito
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="servizi.html" class="btn btn-ghost">
+                        Piani &amp; prezzi
+                    </a>
+                </div>
 
-                <!-- Numeri di credibilità -->
-                <div class="hero-proof">
-                    <div class="proof-item">
+                <div class="hero-trust">
+                    <div class="trust-item">
                         <strong>100%</strong>
                         <span>Abruzzesi</span>
                     </div>
-                    <div class="proof-divider"></div>
-                    <div class="proof-logo">
-                        <img src="logo_completo.jpg.png" alt="Quota Adriatica Logo" class="proof-logo-img">
-                    </div>
-                    <div class="proof-divider"></div>
-                    <div class="proof-item">
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
                         <strong>24h</strong>
-                        <span>Risposta<br>garantita</span>
+                        <span>Prima risposta</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <strong>∞</strong>
+                        <span>Iterazioni</span>
                     </div>
                 </div>
             </div>
+
+            <div class="hero-emblem-wrap" data-comment-anchor="hero-emblem">
+                <div class="hero-emblem-bg"></div>
+                <div class="hero-ring"></div>
+                <div class="hero-ring r2"></div>
+                <div class="hero-ring r3"></div>
+                <span class="hero-coord tl">42°27'N — Adriatico</span>
+                <span class="hero-coord br">14°13'E — Pescara</span>
+                <img src="emblem.png" alt="Emblema Quota Adriatica" class="hero-emblem">
+            </div>
         </div>
 
-        <!-- Onda di transizione verso il bianco -->
-        <div class="hero-wave">
-            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path d="M0,50 C360,90 720,10 1080,50 C1260,70 1380,30 1440,50 L1440,80 L0,80 Z" fill="#ffffff"/>
-            </svg>
-        </div>
+        <!-- Onda decorativa in basso -->
+        <svg class="hero-waves" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,40 Q120,10 240,40 T480,40 T720,40 T960,40 T1200,40 T1440,40" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M0,55 Q120,25 240,55 T480,55 T720,55 T960,55 T1200,55 T1440,55" fill="none" stroke="currentColor" stroke-width="1"/>
+            <path d="M0,70 Q120,40 240,70 T480,70 T720,70 T960,70 T1200,70 T1440,70" fill="none" stroke="currentColor" stroke-width="0.7"/>
+        </svg>
     </header>
 
-    <!-- ====================================================
-         CONFIGURATORE — form multi-step interattivo
-         ==================================================== -->
-    <section class="configuratore" id="configuratore">
+    <!-- ============================================================
+         MARQUEE — valori, motto
+         ============================================================ -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span class="marquee-item">Dalla costa alla vetta del tuo mercato <span class="star">✦</span></span>
+            <span class="marquee-item italic">Made in Abruzzo <span class="star">✦</span></span>
+            <span class="marquee-item">Strategia · Codice · Storytelling <span class="star">✦</span></span>
+            <span class="marquee-item italic">Pescara &middot; Chieti &middot; Teramo &middot; L'Aquila <span class="star">✦</span></span>
+            <span class="marquee-item">Dalla costa alla vetta del tuo mercato <span class="star">✦</span></span>
+            <span class="marquee-item italic">Made in Abruzzo <span class="star">✦</span></span>
+            <span class="marquee-item">Strategia · Codice · Storytelling <span class="star">✦</span></span>
+            <span class="marquee-item italic">Pescara &middot; Chieti &middot; Teramo &middot; L'Aquila <span class="star">✦</span></span>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         CONFIGURATORE
+         ============================================================ -->
+    <section class="configuratore" id="configuratore" data-screen-label="Configuratore">
         <div class="container">
-            <div class="config-header text-center">
-                <span class="badge badge-sea-solid">Gratis · Senza impegno · 1 minuto</span>
-                <h2>Configura il tuo Sito in <span class="text-sea">1 Minuto</span></h2>
-                <p class="config-intro">Rispondi a 3 semplici domande e ricevi una proposta personalizzata.</p>
+            <div class="config-head">
+                <span class="eyebrow centered">Gratis · Risposta in 24h</span>
+                <h2>Configura il tuo sito in <em>un minuto</em>.</h2>
+                <p class="lede centered">Tre domande, una proposta su misura. Senza impegno, senza email automatiche, solo un confronto reale.</p>
             </div>
 
-            <div class="config-wrapper">
-
-                <!-- Indicatore di progresso -->
-                <div class="config-progress-header">
-                    <div class="config-steps-indicator">
-                        <div class="step-pill active" data-step="1">
-                            <span class="step-num">1</span>
-                            <span class="step-label">Tipo</span>
-                        </div>
-                        <div class="step-connector"></div>
-                        <div class="step-pill" data-step="2">
-                            <span class="step-num">2</span>
-                            <span class="step-label">Stile</span>
-                        </div>
-                        <div class="step-connector"></div>
-                        <div class="step-pill" data-step="3">
-                            <span class="step-num">3</span>
-                            <span class="step-label">Contatti</span>
-                        </div>
+            <div class="config-shell">
+                <!-- Progress -->
+                <div class="config-progress">
+                    <div class="step-pill active" data-step="1">
+                        <span class="step-num">01</span>
+                        <span class="label">Tipologia</span>
+                    </div>
+                    <div class="step-pill" data-step="2">
+                        <span class="step-num">02</span>
+                        <span class="label">Stile</span>
+                    </div>
+                    <div class="step-pill" data-step="3">
+                        <span class="step-num">03</span>
+                        <span class="label">Contatto</span>
                     </div>
                 </div>
 
-                <!-- Step 1: Tipo di progetto -->
-                <div class="config-step active" id="step-1">
-                    <h3 class="step-question">Che tipo di sito hai bisogno?</h3>
-                    <div class="option-grid">
-                        <div class="option-card" data-step="1" data-value="ecommerce">
-                            <div class="option-icon"><i data-lucide="shopping-cart"></i></div>
-                            <div class="option-title">E-commerce</div>
-                            <div class="option-desc">Vendi online i tuoi prodotti</div>
-                        </div>
-                        <div class="option-card" data-step="1" data-value="vetrina">
-                            <div class="option-icon"><i data-lucide="layout"></i></div>
-                            <div class="option-title">Sito Vetrina</div>
-                            <div class="option-desc">Presenta la tua attività</div>
-                        </div>
-                        <div class="option-card" data-step="1" data-value="landing">
-                            <div class="option-icon"><i data-lucide="target"></i></div>
-                            <div class="option-title">Landing Page</div>
-                            <div class="option-desc">Converti visitatori in clienti</div>
-                        </div>
-                        <div class="option-card" data-step="1" data-value="portale">
-                            <div class="option-icon"><i data-lucide="layers"></i></div>
-                            <div class="option-title">Portale</div>
-                            <div class="option-desc">Gestisci accessi e contenuti</div>
+                <div class="config-body">
+
+                    <!-- Step 1 -->
+                    <div class="config-step active" id="step-1">
+                        <h3 class="step-question">Che tipo di sito ti serve?</h3>
+                        <div class="option-grid">
+                            <button class="option-card" data-step="1" data-value="ecommerce">
+                                <div class="option-icon"><i data-lucide="shopping-bag"></i></div>
+                                <div class="option-title">E-commerce</div>
+                                <div class="option-desc">Vendi i tuoi prodotti online, dalla scheda al checkout.</div>
+                            </button>
+                            <button class="option-card" data-step="1" data-value="vetrina">
+                                <div class="option-icon"><i data-lucide="store"></i></div>
+                                <div class="option-title">Sito Vetrina</div>
+                                <div class="option-desc">Presenta la tua attività con stile editoriale.</div>
+                            </button>
+                            <button class="option-card" data-step="1" data-value="landing">
+                                <div class="option-icon"><i data-lucide="target"></i></div>
+                                <div class="option-title">Landing Page</div>
+                                <div class="option-desc">Una pagina, un obiettivo: convertire.</div>
+                            </button>
+                            <button class="option-card" data-step="1" data-value="portale">
+                                <div class="option-icon"><i data-lucide="layers"></i></div>
+                                <div class="option-title">Portale / Booking</div>
+                                <div class="option-desc">Prenotazioni, area riservata, gestionali.</div>
+                            </button>
                         </div>
                     </div>
-                </div>
 
-                <!-- Step 2: Stile visivo -->
-                <div class="config-step" id="step-2">
-                    <h3 class="step-question">Che stile visivo preferisci?</h3>
-                    <div class="option-grid style-grid">
-                        <div class="option-card style-card" data-step="2" data-value="minimale">
-                            <div class="style-preview preview-minimale">
-                                <div class="preview-bar"></div>
-                                <div class="preview-block"></div>
-                                <div class="preview-line"></div>
-                                <div class="preview-line short"></div>
-                            </div>
-                            <div class="option-title">Minimale / Moderno</div>
-                            <div class="option-desc">Pulito, essenziale, professionale</div>
-                        </div>
-                        <div class="option-card style-card" data-step="2" data-value="elegante">
-                            <div class="style-preview preview-elegante">
-                                <div class="preview-bar dark"></div>
-                                <div class="preview-block gold"></div>
-                                <div class="preview-line light"></div>
-                                <div class="preview-line short light"></div>
-                            </div>
-                            <div class="option-title">Elegante / Corporate</div>
-                            <div class="option-desc">Autorevole, raffinato, fiducia</div>
-                        </div>
-                        <div class="option-card style-card" data-step="2" data-value="creativo">
-                            <div class="style-preview preview-creativo">
-                                <div class="preview-bar grad"></div>
-                                <div class="preview-block rounded"></div>
-                                <div class="preview-line colored"></div>
-                                <div class="preview-line short colored"></div>
-                            </div>
-                            <div class="option-title">Creativo / Colorato</div>
-                            <div class="option-desc">Vivace, originale, impatto visivo</div>
+                    <!-- Step 2 -->
+                    <div class="config-step" id="step-2">
+                        <h3 class="step-question">Che <em>linguaggio visivo</em> preferisci?</h3>
+                        <div class="option-grid style-grid">
+                            <button class="option-card" data-step="2" data-value="minimale">
+                                <div class="style-preview preview-minimale">
+                                    <div class="bar"></div>
+                                    <div class="bar block"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar short"></div>
+                                </div>
+                                <div class="option-title">Minimale</div>
+                                <div class="option-desc">Pulito, essenziale, contemporaneo.</div>
+                            </button>
+                            <button class="option-card" data-step="2" data-value="elegante">
+                                <div class="style-preview preview-elegante">
+                                    <div class="bar"></div>
+                                    <div class="bar block"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar short"></div>
+                                </div>
+                                <div class="option-title">Editoriale</div>
+                                <div class="option-desc">Autorevole, raffinato, da magazine.</div>
+                            </button>
+                            <button class="option-card" data-step="2" data-value="creativo">
+                                <div class="style-preview preview-creativo">
+                                    <div class="bar"></div>
+                                    <div class="bar block"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar short"></div>
+                                </div>
+                                <div class="option-title">Espressivo</div>
+                                <div class="option-desc">Colore, ritmo, impatto visivo.</div>
+                            </button>
                         </div>
                     </div>
-                </div>
 
-                <!-- Step 3: Contatti -->
-                <div class="config-step" id="step-3">
-                    <h3 class="step-question">Quasi fatto! Chi sei?</h3>
-                    <div class="contact-form">
-                        <div class="form-row">
+                    <!-- Step 3 -->
+                    <div class="config-step" id="step-3">
+                        <h3 class="step-question">Ultimo passo. <em>Chi sei?</em></h3>
+                        <div class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cfg-nome">Nome *</label>
+                                    <input type="text" id="cfg-nome" placeholder="Marco Rossi">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cfg-email">Email *</label>
+                                    <input type="email" id="cfg-email" placeholder="marco@suamattivita.it">
+                                </div>
+                            </div>
                             <div class="form-group">
-                                <label for="config-nome">Il tuo nome *</label>
-                                <input type="text" id="config-nome" placeholder="Es. Marco Rossi">
-                            </div>
-                            <div class="form-group">
-                                <label for="config-email">Email *</label>
-                                <input type="email" id="config-email" placeholder="Es. marco@mioristorante.it">
+                                <label for="cfg-note">Raccontaci la tua attività</label>
+                                <textarea id="cfg-note" rows="4" placeholder="Es. Gestisco un ristorante a Pescara e vorrei più prenotazioni dirette..."></textarea>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="config-note">Raccontaci la tua attività</label>
-                            <textarea id="config-note" rows="3"
-                                placeholder="Es. Gestisco un ristorante a Pescara e voglio più prenotazioni dirette..."></textarea>
-                        </div>
+                    </div>
+
+                    <!-- Successo -->
+                    <div class="config-success" id="step-success">
+                        <div class="success-icon"><i data-lucide="check"></i></div>
+                        <h3 style="color:var(--ink); margin-bottom:12px;">Richiesta ricevuta.</h3>
+                        <p style="color:var(--testo-soft); max-width:42ch; margin:0 auto 24px;">
+                            Ti rispondiamo entro <strong>24 ore</strong> con una proposta su misura.
+                            Controlla la casella, anche lo spam.
+                        </p>
+                        <a href="#servizi" class="btn btn-primary">Scopri i pacchetti <span class="arrow">→</span></a>
                     </div>
                 </div>
 
-                <!-- Step successo -->
-                <div class="config-step config-success" id="step-success">
-                    <div class="success-icon"><i data-lucide="check-circle"></i></div>
-                    <h3>Richiesta inviata con successo!</h3>
-                    <p>Ti contatteremo entro <strong>24 ore</strong> con una proposta su misura. Controlla la tua email.</p>
-                    <a href="#servizi" class="btn btn-primary mt-4">Scopri i nostri pacchetti →</a>
-                </div>
-
-                <!-- Navigazione step -->
                 <div class="config-nav" id="configNav">
-                    <button class="btn btn-outline-sea config-prev" id="prevBtn">← Indietro</button>
-                    <button class="btn btn-primary config-next" id="nextBtn">Avanti →</button>
-                </div>
-
-            </div><!-- .config-wrapper -->
-        </div>
-    </section>
-
-    <!-- ====================================================
-         IL PROBLEMA
-         ==================================================== -->
-    <section class="problem" id="problema">
-        <!-- Orbs decorativi eco della Hero -->
-        <div class="problem-orb problem-orb-1"></div>
-        <div class="problem-orb problem-orb-2"></div>
-
-        <!-- Onda di transizione dal Configuratore (bianco → dark) -->
-        <div class="problem-wave-top">
-            <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,0 L0,0 Z" fill="#f5f8fb"/>
-            </svg>
-        </div>
-
-        <div class="container problem-container">
-            <!-- Badge — stesso componente della Hero -->
-            <span class="badge badge-glow mb-3">📉 Il vero problema del tuo business</span>
-
-            <!-- Titolo con gradient text su keyword, tracking come Hero -->
-            <h2 class="problem-title">
-                Perché la concorrenza di fuori regione<br>
-                <span class="text-gradient-sea">fattura il doppio</span> della tua?
-            </h2>
-
-            <!-- Testo narrativo su sfondo scuro -->
-            <p class="problem-lead">
-                Hai una struttura di altissima qualità in Abruzzo, ma i turisti scelgono mete come la
-                <strong>Riviera Romagnola</strong> o il <strong>Salento</strong>.
-                Il loro segreto non è il mare — è il
-                <span class="text-gradient-sea">posizionamento digitale</span>.
-            </p>
-            <p class="problem-body">
-                Hanno siti veloci, social impeccabili e si fanno trovare su Google. Noi colmiamo questo divario.
-            </p>
-
-            <!-- Features glassmorphism — 3 colonne -->
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon-wrap">
-                        <i data-lucide="zap" class="feature-icon"></i>
-                    </div>
-                    <div class="feature-text">
-                        <strong>Siti Veloci e Ottimizzati</strong>
-                        <span>Core Web Vitals al top</span>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon-wrap">
-                        <i data-lucide="smartphone" class="feature-icon"></i>
-                    </div>
-                    <div class="feature-text">
-                        <strong>Presenza Social Impeccabile</strong>
-                        <span>Content che converte</span>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon-wrap">
-                        <i data-lucide="search" class="feature-icon"></i>
-                    </div>
-                    <div class="feature-text">
-                        <strong>Fatti Trovare Facilmente</strong>
-                        <span>Local SEO dominante</span>
-                    </div>
+                    <button class="btn-nav" id="prevBtn" style="visibility:hidden;">← Indietro</button>
+                    <span class="kicker" id="stepCount">01 / 03</span>
+                    <button class="btn-nav btn-nav-primary" id="nextBtn">Avanti →</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ====================================================
-         PACCHETTI
-         ==================================================== -->
-    <section class="packages" id="servizi">
-        <div class="container packages-container">
-            <div class="text-center mb-5">
-                <h2>Le colonne portanti dell'economia abruzzese. Le nostre soluzioni.</h2>
-                <p class="subtitle mx-auto">Che tu offra ospitalità, servizi professionali o ristorazione,
-                    abbiamo il sistema esatto per farti dominare la tua provincia.</p>
-                <div class="divider bg-sea mx-auto"></div>
+    <!-- ============================================================
+         IL PROBLEMA — sezione scura editoriale
+         ============================================================ -->
+    <section class="problem section-ink" id="problema" data-screen-label="Il Problema">
+        <div class="container problem-grid">
+            <div class="problem-left">
+                <span class="section-num">Capitolo · 01</span>
+                <span class="eyebrow on-dark" style="margin: 0 0 24px;">Il vero divario</span>
+                <h2>Perché la concorrenza fuori regione <em>fattura il doppio</em>?</h2>
+                <p class="problem-lede">
+                    Hai una struttura di qualità in Abruzzo, ma i turisti scelgono Riviera Romagnola e Salento.
+                    Il loro segreto non è il mare. È il <strong>posizionamento digitale</strong>.
+                </p>
+                <p class="problem-body">
+                    Siti veloci, social impeccabili, ricerche locali presidiate. Hanno costruito un sistema dove la qualità
+                    incontra finalmente il pubblico giusto. Noi colmiamo questo divario, una azienda alla volta.
+                </p>
             </div>
+
+            <div class="problem-features">
+                <div class="p-feature">
+                    <span class="p-feature-num">001</span>
+                    <div class="p-feature-content">
+                        <strong>Siti veloci e ottimizzati</strong>
+                        <span>Core Web Vitals al vertice, mobile-first reale.</span>
+                    </div>
+                    <div class="p-feature-icon"><i data-lucide="zap"></i></div>
+                </div>
+                <div class="p-feature">
+                    <span class="p-feature-num">002</span>
+                    <div class="p-feature-content">
+                        <strong>Presenza social impeccabile</strong>
+                        <span>Content che fa fermare il pollice, non solo postato per esistere.</span>
+                    </div>
+                    <div class="p-feature-icon"><i data-lucide="smartphone"></i></div>
+                </div>
+                <div class="p-feature">
+                    <span class="p-feature-num">003</span>
+                    <div class="p-feature-content">
+                        <strong>Local SEO dominante</strong>
+                        <span>Primi sulle ricerche che contano davvero per il tuo bacino.</span>
+                    </div>
+                    <div class="p-feature-icon"><i data-lucide="search"></i></div>
+                </div>
+                <div class="p-feature">
+                    <span class="p-feature-num">004</span>
+                    <div class="p-feature-content">
+                        <strong>Disintermediazione</strong>
+                        <span>Prenotazioni dirette, meno commissioni alle piattaforme.</span>
+                    </div>
+                    <div class="p-feature-icon"><i data-lucide="link-2"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PACCHETTI / SOLUZIONI
+         ============================================================ -->
+    <section class="packages" id="servizi" data-screen-label="Soluzioni">
+        <div class="container">
+            <div class="packages-head">
+                <span class="eyebrow centered">Capitolo · 02 · Le Soluzioni</span>
+                <h2>Quattro <em>colonne</em>, una promessa:<br>portare il tuo settore al vertice.</h2>
+                <p class="lede centered">Ospitalità, ristorazione, servizi professionali, costa. Sappiamo cosa converte in Abruzzo perché lo viviamo tutti i giorni.</p>
+            </div>
+
             <div class="cards-grid">
 
-                <!-- Card 1: Stabilimenti Balneari — accento sea blue -->
-                <div class="card card-lido" onclick="window.location.href='servizi.html'" style="cursor:pointer">
-                    <div class="card-header">
-                        <div class="card-icon-wrap">
-                            <i data-lucide="umbrella" class="card-icon"></i>
-                        </div>
-                        <span class="card-target">Per Stabilimenti Balneari</span>
-                        <h3>Pacchetto "Lido Premium"</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="benefit-list">
-                            <li><i data-lucide="check-circle-2"></i> Sito mobile-first ad alta velocità</li>
-                            <li><i data-lucide="check-circle-2"></i> Menu e prenotazione ombrelloni online</li>
-                            <li><i data-lucide="check-circle-2"></i> Social "Effetto FOMO" (Instagram/TikTok)</li>
-                            <li><i data-lucide="check-circle-2"></i> Local SEO per intercettare i turisti sulla costa</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a href="servizi.html" onclick="event.stopPropagation()" class="btn btn-primary w-100">Scopri il pacchetto →</a>
-                    </div>
-                </div>
+                <!-- Card 1: Stabilimenti -->
+                <a href="servizi.html" class="card card-lido" data-comment-anchor="card-lido">
+                    <span class="card-num">01 — Costa</span>
+                    <div class="card-icon"><i data-lucide="umbrella"></i></div>
+                    <span class="card-target">Stabilimenti balneari</span>
+                    <h3>Lido <em>Premium</em></h3>
+                    <ul class="card-list">
+                        <li><i data-lucide="check"></i><span>Sito mobile-first ad alta velocità</span></li>
+                        <li><i data-lucide="check"></i><span>Menu e prenotazione ombrelloni online</span></li>
+                        <li><i data-lucide="check"></i><span>Social "Effetto FOMO" Instagram &amp; TikTok</span></li>
+                        <li><i data-lucide="check"></i><span>Local SEO per intercettare turisti sulla costa</span></li>
+                    </ul>
+                    <span class="card-cta">Scopri il pacchetto <span class="arrow">→</span></span>
+                </a>
 
-                <!-- Card 2: Agriturismi — accento hill green -->
-                <div class="card card-ospital" onclick="window.location.href='servizi.html'" style="cursor:pointer">
-                    <div class="card-header">
-                        <div class="card-icon-wrap">
-                            <i data-lucide="home" class="card-icon"></i>
-                        </div>
-                        <span class="card-target">Per Agriturismi e Strutture Ricettive</span>
-                        <h3>Pacchetto "Ospitalità Autentica"</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="benefit-list">
-                            <li><i data-lucide="check-circle-2"></i> Sito web emozionale e storytelling visivo</li>
-                            <li><i data-lucide="check-circle-2"></i> Disintermediazione diretta</li>
-                            <li><i data-lucide="check-circle-2"></i> Social Storytelling del territorio</li>
-                            <li><i data-lucide="check-circle-2"></i> Ads per destagionalizzare e riempire la bassa stagione</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a href="servizi.html" onclick="event.stopPropagation()" class="btn btn-primary w-100">Scopri il pacchetto →</a>
-                    </div>
-                </div>
+                <!-- Card 2: Agriturismi -->
+                <a href="servizi.html" class="card card-ospital" data-comment-anchor="card-ospital">
+                    <span class="card-num">02 — Entroterra</span>
+                    <div class="card-icon"><i data-lucide="home"></i></div>
+                    <span class="card-target">Agriturismi &amp; ricettive</span>
+                    <h3>Ospitalità <em>Autentica</em></h3>
+                    <ul class="card-list">
+                        <li><i data-lucide="check"></i><span>Sito emozionale e storytelling visivo</span></li>
+                        <li><i data-lucide="check"></i><span>Disintermediazione diretta dalle OTA</span></li>
+                        <li><i data-lucide="check"></i><span>Social storytelling del territorio</span></li>
+                        <li><i data-lucide="check"></i><span>Ads per destagionalizzare la bassa stagione</span></li>
+                    </ul>
+                    <span class="card-cta">Scopri il pacchetto <span class="arrow">→</span></span>
+                </a>
 
-                <!-- Card 3: Professionisti — accento oro -->
-                <div class="card card-studio" onclick="window.location.href='servizi.html'" style="cursor:pointer">
-                    <div class="card-header">
-                        <div class="card-icon-wrap">
-                            <i data-lucide="award" class="card-icon"></i>
-                        </div>
-                        <span class="card-target">Per Studi Medici, Agenzie e Professionisti</span>
-                        <h3>Pacchetto "Studio Autorevole"</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="benefit-list">
-                            <li><i data-lucide="check-circle-2"></i> Sito web orientato alla Lead Generation</li>
-                            <li><i data-lucide="check-circle-2"></i> Local SEO per dominare le ricerche Google</li>
-                            <li><i data-lucide="check-circle-2"></i> Social "Authority" per creare fiducia</li>
-                            <li><i data-lucide="check-circle-2"></i> Google Ads per intercettare domanda consapevole</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a href="servizi.html" onclick="event.stopPropagation()" class="btn btn-primary w-100">Scopri il pacchetto →</a>
-                    </div>
-                </div>
+                <!-- Card 3: Professionisti -->
+                <a href="servizi.html" class="card card-studio" data-comment-anchor="card-studio">
+                    <span class="card-num">03 — Professionisti</span>
+                    <div class="card-icon"><i data-lucide="award"></i></div>
+                    <span class="card-target">Studi, agenzie, liberi pro.</span>
+                    <h3>Studio <em>Autorevole</em></h3>
+                    <ul class="card-list">
+                        <li><i data-lucide="check"></i><span>Sito orientato alla lead generation</span></li>
+                        <li><i data-lucide="check"></i><span>Local SEO per dominare le ricerche Google</span></li>
+                        <li><i data-lucide="check"></i><span>Social "Authority" per costruire fiducia</span></li>
+                        <li><i data-lucide="check"></i><span>Google Ads su domanda consapevole</span></li>
+                    </ul>
+                    <span class="card-cta">Scopri il pacchetto <span class="arrow">→</span></span>
+                </a>
 
-                <!-- Card 4: Ristorazione — accento mountain -->
-                <div class="card card-tavola" onclick="window.location.href='servizi.html'" style="cursor:pointer">
-                    <div class="card-header">
-                        <div class="card-icon-wrap">
-                            <i data-lucide="utensils" class="card-icon"></i>
-                        </div>
-                        <span class="card-target">Per Ristoranti, Bar e Locali</span>
-                        <h3>Pacchetto "Tavola d'Eccellenza"</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="benefit-list">
-                            <li><i data-lucide="check-circle-2"></i> Sito con Menu digitale e prenotazione diretta</li>
-                            <li><i data-lucide="check-circle-2"></i> Local SEO e Reputation</li>
-                            <li><i data-lucide="check-circle-2"></i> Social "Food Experience"</li>
-                            <li><i data-lucide="check-circle-2"></i> Ads per riempire i tavoli infrasettimanali</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a href="servizi.html" onclick="event.stopPropagation()" class="btn btn-primary w-100">Scopri il pacchetto →</a>
-                    </div>
-                </div>
+                <!-- Card 4: Ristorazione -->
+                <a href="servizi.html" class="card card-tavola" data-comment-anchor="card-tavola">
+                    <span class="card-num">04 — Tavola</span>
+                    <div class="card-icon"><i data-lucide="utensils"></i></div>
+                    <span class="card-target">Ristoranti, bar, locali</span>
+                    <h3>Tavola <em>d'Eccellenza</em></h3>
+                    <ul class="card-list">
+                        <li><i data-lucide="check"></i><span>Menu digitale e prenotazione diretta</span></li>
+                        <li><i data-lucide="check"></i><span>Local SEO &amp; Reputation Management</span></li>
+                        <li><i data-lucide="check"></i><span>Social "Food Experience"</span></li>
+                        <li><i data-lucide="check"></i><span>Ads per riempire i tavoli infrasettimanali</span></li>
+                    </ul>
+                    <span class="card-cta">Scopri il pacchetto <span class="arrow">→</span></span>
+                </a>
 
             </div>
         </div>
     </section>
 
-    <!-- ====================================================
-         CHI SIAMO
-         ==================================================== -->
-    <section class="about section-light" id="chi-siamo">
-        <div class="container about-container">
-            <div class="about-image">
-                <img src="pontedelmare.jpg" alt="Ponte del Mare - Pescara" class="rounded-image shadow-large">
-                <div class="experience-badge">
-                    <span class="number">100%</span>
-                    <span class="text">Abruzzesi</span>
+    <!-- ============================================================
+         CHI SIAMO — split editoriale
+         ============================================================ -->
+    <section class="about" id="chi-siamo" data-screen-label="Studio">
+        <div class="container about-grid">
+            <div class="about-img-wrap">
+                <img src="pontedelmare.jpg" alt="Ponte del Mare — Pescara" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(180deg, var(--mare), var(--ink))';">
+                <div class="about-stamp">
+                    <span class="num">100%</span>
+                    <span class="lbl">Abruzzo</span>
                 </div>
             </div>
             <div class="about-content">
-                <span class="badge badge-mountain mb-2">Il Vantaggio Locale</span>
-                <h2>Siamo di Pescara. Conosciamo il tuo mare, la tua terra e i tuoi clienti.</h2>
-                <div class="divider bg-mountain"></div>
-                <p>Non siamo un'agenzia fredda e lontana. Parliamo la tua stessa lingua e sappiamo cosa significa
-                    fare impresa in Abruzzo.</p>
-                <p>Ti diamo le strategie delle grandi multinazionali, applicate alla tua realtà locale.</p>
+                <span class="section-num">Capitolo · 03 · Lo Studio</span>
+                <span class="eyebrow">Il vantaggio locale</span>
+                <h2>Siamo di <em>Pescara</em>. Conosciamo il mare, la terra e i tuoi clienti.</h2>
+                <p>Non siamo un'agenzia fredda e lontana. Parliamo la tua stessa lingua, sappiamo cosa significa fare impresa in Abruzzo: la stagionalità, i margini, la concorrenza di chi ti sta a 50 km.</p>
+                <p>Portiamo le strategie delle grandi agenzie, applicate alla tua realtà locale. Con un team piccolo, attento, presente — non un account manager che cambia ogni tre mesi.</p>
+
+                <div class="signature">
+                    <div>
+                        <div class="signature-text">"Dalla costa alla vetta del tuo mercato."</div>
+                        <div class="signature-meta">Quota Adriatica · Pescara, Abruzzo</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ====================================================
-         FOOTER / CTA FINALE
-         ==================================================== -->
-    <footer class="footer section-dark" id="contatti">
-        <div class="container footer-container text-center">
-            <h2 class="footer-title">Smetti di guardare gli altri che fanno il tutto esaurito.</h2>
-            <p class="footer-subtitle">Il salto di qualità per la tua azienda inizia da qui.</p>
-            <div class="footer-cta mt-5">
-                <a href="mailto:olimezz@icloud.com" class="btn btn-primary btn-large">
-                    Fissiamo un incontro strategico
-                    <span class="small-text">(Senza impegno)</span>
-                </a>
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="footer" id="contatti" data-screen-label="Footer">
+        <div class="container">
+            <div class="footer-cta">
+                <span class="eyebrow centered on-dark">Smetti di guardare gli altri fare il tutto esaurito</span>
+                <h2>Il salto di qualità per la tua azienda <em>inizia qui</em>.</h2>
+                <p>Un incontro strategico, senza impegno. Per capire se possiamo fare davvero la differenza.</p>
+                <div class="footer-actions">
+                    <a href="mailto:olimezz@icloud.com" class="btn btn-terra btn-lg">
+                        Fissa un incontro <span class="arrow">→</span>
+                    </a>
+                    <a href="#configuratore" class="btn btn-ghost-light btn-lg">
+                        Configura il sito
+                    </a>
+                </div>
             </div>
+
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <img src="emblem.png" alt="Quota Adriatica" class="brand-mark">
+                        <span class="brand-word">
+                            <span class="one">Quota</span>
+                            <span class="two">Adriatica</span>
+                        </span>
+                    </a>
+                    <p>Studio digitale per le aziende abruzzesi che vogliono dominare il proprio mercato. Strategia, codice e storytelling — dal 2025, da Pescara.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul>
+                        <li><a href="servizi.html">Sviluppo Web</a></li>
+                        <li><a href="servizi.html">Social Media</a></li>
+                        <li><a href="servizi.html">Local SEO</a></li>
+                        <li><a href="servizi.html">Google Ads</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Settori</h4>
+                    <ul>
+                        <li><a href="#servizi">Stabilimenti</a></li>
+                        <li><a href="#servizi">Ospitalità</a></li>
+                        <li><a href="#servizi">Professionisti</a></li>
+                        <li><a href="#servizi">Ristorazione</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contatto</h4>
+                    <ul>
+                        <li><a href="mailto:olimezz@icloud.com">olimezz@icloud.com</a></li>
+                        <li>Pescara, Abruzzo</li>
+                        <li>Lun—Ven · 9–18</li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="footer-bottom">
-                <p class="footer-tagline">Dalla costa alla vetta del tuo mercato</p>
-                <p>&copy; 2026 Quota Adriatica. Tutti i diritti riservati. Sede: Pescara, Abruzzo.</p>
+                <span class="footer-tagline">Dalla costa alla vetta del tuo mercato.</span>
+                <span>© 2026 Quota Adriatica · P.IVA — · Pescara</span>
             </div>
         </div>
     </footer>
+
+    <!-- ============================================================
+         TWEAKS PANEL
+         ============================================================ -->
+    <button class="tweaks-toggle" id="tweaksToggle" aria-label="Tweaks">
+        <i data-lucide="sliders-horizontal"></i>
+    </button>
+
+    <div class="tweaks-panel" id="tweaksPanel">
+        <button class="close-x" id="tweaksClose" aria-label="Chiudi"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        <h5>Stile · Tweaks</h5>
+
+        <div class="group">
+            <label>Palette</label>
+            <div class="tweak-row">
+                <button class="swatch active" data-palette="default" style="background: linear-gradient(135deg, #16304f 50%, #a85f3a 50%)" title="Default (Logo)"></button>
+                <button class="swatch" data-palette="mare" style="background: linear-gradient(135deg, #4d7e9b 50%, #c89a5a 50%)" title="Mare"></button>
+                <button class="swatch" data-palette="terra" style="background: linear-gradient(135deg, #844a2c 50%, #6b8c4f 50%)" title="Terra"></button>
+                <button class="swatch" data-palette="mono" style="background: linear-gradient(135deg, #1a1610 50%, #8a8170 50%)" title="Mono"></button>
+            </div>
+        </div>
+
+        <div class="group">
+            <label>Sfondo</label>
+            <div class="tweak-row">
+                <button class="swatch active" data-bg="paper" style="background:#faf6ee" title="Paper"></button>
+                <button class="swatch" data-bg="pergamena" style="background:#f1e9d8" title="Pergamena"></button>
+                <button class="swatch" data-bg="white" style="background:#ffffff; border-color:#ddd" title="Bianco"></button>
+            </div>
+        </div>
+
+        <div class="group">
+            <label>Densità</label>
+            <div class="tweak-row">
+                <button class="swatch active" data-density="comfortable" style="background:var(--crema); color:var(--ink); display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:600">Norm</button>
+                <button class="swatch" data-density="compact" style="background:var(--crema); color:var(--ink); display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:600">Cmpct</button>
+                <button class="swatch" data-density="airy" style="background:var(--crema); color:var(--ink); display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:600">Airy</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         /* ============================================================
@@ -468,139 +544,187 @@
         lucide.createIcons();
 
         /* ============================================================
-           NAVBAR — diventa solida allo scroll
+           NAVBAR scroll state
            ============================================================ */
         const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 60);
-        });
+        const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 30);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
 
         /* ============================================================
-           HAMBURGER MENU
+           HAMBURGER
            ============================================================ */
         const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-
+        const navLinks  = document.getElementById('navLinks');
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('open');
         });
 
         /* ============================================================
-           SMOOTH SCROLL — chiude anche il menu mobile
+           SMOOTH SCROLL
            ============================================================ */
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || href.length < 2) return;
+                const target = document.querySelector(href);
+                if (!target) return;
                 e.preventDefault();
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('open');
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
+                const y = target.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top: y, behavior: 'smooth' });
             });
         });
 
         /* ============================================================
            CONFIGURATORE MULTI-STEP
            ============================================================ */
-        let stepCorrente = 1;
-        const TOTALE_STEP = 3;
-        const selezioni = { tipo: null, stile: null };
+        let currentStep = 1;
+        const TOTAL = 3;
+        const selections = { tipo: null, stile: null };
 
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
+        const stepCountEl = document.getElementById('stepCount');
         const configNav = document.getElementById('configNav');
 
-        // Stato iniziale pulsanti
-        prevBtn.style.display = 'none';
-
-        // Selezione card opzione con avanzamento automatico
         document.querySelectorAll('.option-card').forEach(card => {
             card.addEventListener('click', () => {
                 const step = card.dataset.step;
-                document.querySelectorAll(`.option-card[data-step="${step}"]`)
-                    .forEach(c => c.classList.remove('selected'));
+                document.querySelectorAll(`.option-card[data-step="${step}"]`).forEach(c => c.classList.remove('selected'));
                 card.classList.add('selected');
-
-                if (step === '1') selezioni.tipo = card.dataset.value;
-                if (step === '2') selezioni.stile = card.dataset.value;
-
-                // Avanzamento automatico dopo micro-delay per mostrare selezione
-                setTimeout(() => {
-                    if (stepCorrente < TOTALE_STEP) avanzaStep();
-                }, 380);
+                if (step === '1') selections.tipo  = card.dataset.value;
+                if (step === '2') selections.stile = card.dataset.value;
+                setTimeout(() => { if (currentStep < TOTAL) goNext(); }, 380);
             });
         });
+
+        function showStep(n) {
+            document.getElementById(`step-${currentStep}`).classList.remove('active');
+            currentStep = n;
+            const el = document.getElementById(`step-${currentStep}`);
+            if (el) el.classList.add('active');
+            document.querySelectorAll('.step-pill').forEach(p => {
+                const num = parseInt(p.dataset.step);
+                p.classList.remove('active', 'completed');
+                if (num === currentStep) p.classList.add('active');
+                else if (num < currentStep) p.classList.add('completed');
+            });
+            prevBtn.style.visibility = currentStep > 1 ? 'visible' : 'hidden';
+            nextBtn.textContent = currentStep === TOTAL ? 'Invia richiesta →' : 'Avanti →';
+            stepCountEl.textContent = `0${currentStep} / 0${TOTAL}`;
+        }
+
+        function goNext() { showStep(Math.min(currentStep + 1, TOTAL)); }
+        function goPrev() { showStep(Math.max(currentStep - 1, 1)); }
 
         nextBtn.addEventListener('click', () => {
-            if (stepCorrente === TOTALE_STEP) {
-                inviaForm();
-            } else {
-                avanzaStep();
-            }
+            if (currentStep === TOTAL) submitForm();
+            else goNext();
         });
+        prevBtn.addEventListener('click', goPrev);
 
-        prevBtn.addEventListener('click', tornaStep);
+        function submitForm() {
+            const nome  = document.getElementById('cfg-nome').value.trim();
+            const email = document.getElementById('cfg-email').value.trim();
+            let valid = true;
+            if (!nome)  { document.getElementById('cfg-nome').classList.add('input-error');  valid = false; }
+            if (!email) { document.getElementById('cfg-email').classList.add('input-error'); valid = false; }
+            if (!valid) return;
 
-        function avanzaStep() { mostraStep(stepCorrente + 1); }
-        function tornaStep() { mostraStep(stepCorrente - 1); }
-
-        function mostraStep(nuovoStep) {
-            document.getElementById(`step-${stepCorrente}`).classList.remove('active');
-            stepCorrente = nuovoStep;
-            const el = document.getElementById(`step-${stepCorrente}`);
-            if (el) el.classList.add('active');
-
-            aggiornaIndicatori();
-            prevBtn.style.display = stepCorrente > 1 ? 'inline-flex' : 'none';
-            nextBtn.textContent = stepCorrente === TOTALE_STEP ? 'Invia Richiesta ✉' : 'Avanti →';
-        }
-
-        function aggiornaIndicatori() {
-            document.querySelectorAll('.step-pill').forEach(pill => {
-                const n = parseInt(pill.dataset.step);
-                pill.classList.remove('active', 'completed');
-                if (n === stepCorrente) pill.classList.add('active');
-                if (n < stepCorrente) pill.classList.add('completed');
-            });
-            document.querySelectorAll('.step-connector').forEach((conn, i) => {
-                conn.classList.toggle('completed', i < stepCorrente - 1);
-            });
-        }
-
-        function inviaForm() {
-            const nome = document.getElementById('config-nome').value.trim();
-            const email = document.getElementById('config-email').value.trim();
-
-            // Validazione campi obbligatori
-            let valido = true;
-            if (!nome) { document.getElementById('config-nome').classList.add('input-error'); valido = false; }
-            if (!email) { document.getElementById('config-email').classList.add('input-error'); valido = false; }
-            if (!valido) return;
-
-            const note = document.getElementById('config-note').value;
-            const oggetto = encodeURIComponent(`Configuratore - ${selezioni.tipo || 'Non specificato'} | ${nome}`);
-            const corpo = encodeURIComponent(
-                `Nome: ${nome}\nEmail: ${email}\nTipo sito: ${selezioni.tipo || 'Non specificato'}\nStile: ${selezioni.stile || 'Non specificato'}\nNote: ${note}`
+            const note = document.getElementById('cfg-note').value;
+            const subj = encodeURIComponent(`Configuratore · ${selections.tipo || 'n.d.'} | ${nome}`);
+            const body = encodeURIComponent(
+                `Nome: ${nome}\nEmail: ${email}\nTipo: ${selections.tipo || 'n.d.'}\nStile: ${selections.stile || 'n.d.'}\nNote: ${note}`
             );
-            window.location.href = `mailto:olimezz@icloud.com?subject=${oggetto}&body=${corpo}`;
+            window.location.href = `mailto:olimezz@icloud.com?subject=${subj}&body=${body}`;
 
-            // Mostra successo
-            document.getElementById(`step-${stepCorrente}`).classList.remove('active');
+            document.getElementById(`step-${currentStep}`).classList.remove('active');
             document.getElementById('step-success').classList.add('active');
             configNav.style.display = 'none';
             document.querySelectorAll('.step-pill').forEach(p => {
                 p.classList.remove('active');
                 p.classList.add('completed');
             });
-            document.querySelectorAll('.step-connector').forEach(c => c.classList.add('completed'));
         }
 
-        // Rimuove errore mentre l'utente digita
-        ['config-nome', 'config-email'].forEach(id => {
+        ['cfg-nome', 'cfg-email'].forEach(id => {
             document.getElementById(id).addEventListener('input', function () {
                 this.classList.remove('input-error');
             });
         });
+
+        /* ============================================================
+           TWEAKS PANEL
+           ============================================================ */
+        const tweaksToggle = document.getElementById('tweaksToggle');
+        const tweaksPanel  = document.getElementById('tweaksPanel');
+        const tweaksClose  = document.getElementById('tweaksClose');
+
+        tweaksToggle.addEventListener('click', () => tweaksPanel.classList.toggle('open'));
+        tweaksClose .addEventListener('click', () => tweaksPanel.classList.remove('open'));
+
+        const palettes = {
+            default:  { ink: '#16304f', terra: '#a85f3a', gold: '#c89a5a', mare: '#4d7e9b' },
+            mare:     { ink: '#0e3a52', terra: '#c89a5a', gold: '#e0c084', mare: '#4d7e9b' },
+            terra:    { ink: '#844a2c', terra: '#6b8c4f', gold: '#c89a5a', mare: '#a85f3a' },
+            mono:     { ink: '#1a1610', terra: '#8a8170', gold: '#b0a695', mare: '#5a5145' },
+        };
+
+        document.querySelectorAll('[data-palette]').forEach(sw => {
+            sw.addEventListener('click', () => {
+                document.querySelectorAll('[data-palette]').forEach(s => s.classList.remove('active'));
+                sw.classList.add('active');
+                const p = palettes[sw.dataset.palette];
+                Object.entries(p).forEach(([k, v]) => document.documentElement.style.setProperty(`--${k}`, v));
+            });
+        });
+
+        const bgs = {
+            paper:     '#faf6ee',
+            pergamena: '#f1e9d8',
+            white:     '#ffffff'
+        };
+        document.querySelectorAll('[data-bg]').forEach(sw => {
+            sw.addEventListener('click', () => {
+                document.querySelectorAll('[data-bg]').forEach(s => s.classList.remove('active'));
+                sw.classList.add('active');
+                document.documentElement.style.setProperty('--carta', bgs[sw.dataset.bg]);
+            });
+        });
+
+        const densities = { compact: '0.85', comfortable: '1', airy: '1.2' };
+        document.querySelectorAll('[data-density]').forEach(sw => {
+            sw.addEventListener('click', () => {
+                document.querySelectorAll('[data-density]').forEach(s => s.classList.remove('active'));
+                sw.classList.add('active');
+                document.documentElement.style.setProperty('--section-scale', densities[sw.dataset.density]);
+                document.documentElement.style.fontSize = `${16 * parseFloat(densities[sw.dataset.density])}px`;
+            });
+        });
+
+        /* ============================================================
+           INTERSECTION OBSERVER — fade in
+           ============================================================ */
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = 1;
+                    e.target.style.transform = 'translateY(0)';
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .p-feature, .config-shell, .about-content, .about-img-wrap').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(28px)';
+            el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+            io.observe(el);
+        });
     </script>
+
 </body>
 </html>

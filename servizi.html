@@ -1,92 +1,89 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servizi e Prezzi | Quota Adriatica</title>
-    <meta name="description" content="Piani e prezzi per Sviluppo Web e Social Media Management. Soluzioni digitali per aziende abruzzesi.">
+    <title>Piani &amp; Prezzi · Quota Adriatica</title>
+    <meta name="description" content="Piani e prezzi per Sviluppo Web e Social Media Management. Soluzioni digitali su misura per le aziende abruzzesi.">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="servizi.css">
-
-    <!-- Vercel Web Analytics -->
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
 </head>
-
-<body>
+<body data-screen-label="02 Piani & Prezzi">
 
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="logo.png" alt="Quota Adriatica" class="logo-img" onerror="this.style.display='none'">
-                </a>
-            </div>
+        <div class="container nav-row">
+            <a href="index.html" class="brand">
+                <img src="emblem.png" alt="Quota Adriatica" class="brand-mark">
+                <span class="brand-word">
+                    <span class="one">Quota</span>
+                    <span class="two">Adriatica</span>
+                </span>
+            </a>
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="index.html#problema" class="nav-link">Il Problema</a>
-                <a href="#" class="nav-link">Servizi</a>
-                <a href="index.html#chi-siamo" class="nav-link">Chi Siamo</a>
-                <a href="index.html#configuratore" class="btn btn-primary nav-cta-mobile">Inizia Gratis</a>
+                <a href="#" class="nav-link" style="color:var(--terra)">Piani</a>
+                <a href="index.html#chi-siamo" class="nav-link">Studio</a>
+                <a href="index.html#configuratore" class="nav-link">Configura</a>
             </div>
-            <a href="index.html#configuratore" class="btn btn-primary nav-cta-desktop">Inizia Gratis</a>
-            <button class="hamburger" id="hamburger" aria-label="Apri menu">
+            <a href="index.html#configuratore" class="nav-cta">Inizia <span>→</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
     <!-- HERO COMPATTO -->
-    <header class="sv-hero">
-        <div class="hero-orb hero-orb-1"></div>
-        <div class="hero-orb hero-orb-2"></div>
-        <div class="hero-grid"></div>
-        <div class="container sv-hero-container">
-            <span class="badge badge-glow">💼 Piani e Prezzi</span>
-            <h1 class="sv-hero-title">
-                Soluzioni su misura per<br>
-                <span class="text-gradient-sea">le aziende abruzzesi</span>
+    <header class="sv-hero" data-screen-label="Hero Piani">
+        <div class="container sv-hero-inner">
+            <span class="eyebrow centered">Piani · Prezzi · Senza sorprese</span>
+            <h1>
+                Soluzioni su misura<br>
+                per le <em>aziende abruzzesi</em>.
             </h1>
-            <p class="sv-hero-subtitle">Scegli il piano perfetto, senza sorprese. Prezzi chiari, risultati misurabili.</p>
-        </div>
-        <div class="sv-hero-wave">
-            <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,60 L0,60 Z" fill="#080f22"/>
-            </svg>
+            <p class="lede centered">Tariffe trasparenti, risultati misurabili. Scegli il piano che parla alla tua scala — possiamo sempre evolvere insieme.</p>
+            <div class="sv-hero-meta">
+                <span class="kicker">Ultimo aggiornamento · Maggio 2026</span>
+                <span class="dot-sep">·</span>
+                <span class="kicker">Disponibili nuovi slot</span>
+            </div>
         </div>
     </header>
 
-    <!-- SEZIONE SERVIZI -->
+    <!-- MAIN -->
     <main class="sv-main">
         <div class="container">
 
             <!-- ============================================================
                  MACRO-CARD: SVILUPPO WEB
                  ============================================================ -->
-            <div class="macro-card" id="macro-web">
+            <article class="macro-card" id="macro-web" data-screen-label="Sviluppo Web">
                 <div class="macro-card-header" id="header-web" role="button" tabindex="0" aria-expanded="false">
-                    <div class="macro-icon macro-icon-web">
-                        <i data-lucide="monitor"></i>
+                    <div class="macro-side">
+                        <span class="macro-num">01</span>
                     </div>
+                    <div class="macro-icon"><i data-lucide="monitor"></i></div>
                     <div class="macro-card-info">
-                        <span class="macro-label">UNA TANTUM</span>
-                        <h2 class="macro-title">Sviluppo Web</h2>
+                        <span class="macro-label">Una tantum</span>
+                        <h2 class="macro-title">Sviluppo <em>Web</em></h2>
+                        <p class="macro-desc">Siti progettati per convertire. Tre scale, una stessa cura sartoriale.</p>
                     </div>
                     <div class="macro-card-actions">
-                        <span class="macro-count">3 piani disponibili</span>
+                        <span class="macro-count">3 piani</span>
                         <button class="btn-scopri" aria-label="Mostra piani Sviluppo Web">
-                            Scopri Piani
-                            <div class="macro-toggle" id="toggle-web">
-                                <i data-lucide="chevron-down"></i>
-                            </div>
+                            <span class="label-open">Scopri piani</span>
+                            <span class="label-close">Riduci</span>
+                            <div class="macro-toggle" id="toggle-web"><i data-lucide="chevron-down"></i></div>
                         </button>
                     </div>
                 </div>
@@ -96,93 +93,98 @@
 
                         <!-- Starter -->
                         <div class="plan-card">
-                            <div class="plan-icon-wrap picon-blue">
-                                <i data-lucide="zap"></i>
+                            <div class="plan-head">
+                                <span class="plan-kicker">Piano · I</span>
+                                <h3 class="plan-name">Starter</h3>
+                                <p class="plan-desc">Per liberi professionisti che entrano online con stile.</p>
                             </div>
-                            <h3 class="plan-name">Starter</h3>
-                            <p class="plan-desc">Ideale per liberi professionisti.</p>
-                            <div class="plan-price plan-price-blue">
+                            <div class="plan-price">
                                 <span class="p-currency">€</span>
                                 <span class="p-amount">299</span>
+                                <span class="p-period">una tantum</span>
                             </div>
-                            <p class="price-note">+ 29€/mese</p>
+                            <p class="price-note">+ 29€ / mese di mantenimento</p>
                             <ul class="plan-features">
-                                <li class="feat-yes"><i data-lucide="check"></i>1 Pagina</li>
-                                <li class="feat-yes"><i data-lucide="check"></i>Hosting Incluso</li>
-                                <li class="feat-yes"><i data-lucide="check"></i>1 Modifica/mese</li>
-                                <li class="feat-no"><i data-lucide="x"></i>SEO non incluso</li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>1 Pagina editorialmente curata</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Hosting &amp; dominio inclusi</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>1 modifica al mese</span></li>
+                                <li class="feat-no"><i data-lucide="minus"></i><span>SEO avanzato non incluso</span></li>
                             </ul>
-                            <a href="index.html#configuratore" class="btn-plan">Seleziona Piano</a>
+                            <a href="index.html#configuratore" class="btn-plan">Seleziona piano <span class="arrow">→</span></a>
                         </div>
 
                         <!-- Business [CONSIGLIATO] -->
-                        <div class="plan-card plan-featured plan-green">
-                            <div class="badge-consigliato bdg-green">CONSIGLIATO</div>
-                            <div class="plan-icon-wrap picon-green">
-                                <i data-lucide="building-2"></i>
+                        <div class="plan-card plan-featured">
+                            <div class="plan-ribbon">Consigliato</div>
+                            <div class="plan-head">
+                                <span class="plan-kicker">Piano · II</span>
+                                <h3 class="plan-name">Business</h3>
+                                <p class="plan-desc">Per attività locali che vogliono presidiare il loro mercato.</p>
                             </div>
-                            <h3 class="plan-name">Business</h3>
-                            <p class="plan-desc">Ideale per attività locali.</p>
-                            <div class="plan-price plan-price-green">
+                            <div class="plan-price">
                                 <span class="p-currency">€</span>
                                 <span class="p-amount">549</span>
+                                <span class="p-period">una tantum</span>
                             </div>
-                            <p class="price-note">+ 49€/mese</p>
+                            <p class="price-note">+ 49€ / mese di mantenimento</p>
                             <ul class="plan-features">
-                                <li class="feat-yes feat-green"><i data-lucide="check"></i>Fino a 5 Pagine</li>
-                                <li class="feat-yes feat-green"><i data-lucide="check"></i>SEO Base</li>
-                                <li class="feat-yes feat-green"><i data-lucide="check"></i>3 Modifiche/mese</li>
-                                <li class="feat-yes feat-green"><i data-lucide="check"></i>Hosting Incluso</li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Fino a 5 pagine</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>SEO base &amp; Schema markup</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>3 modifiche al mese</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Hosting &amp; dominio inclusi</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Form contatti + integrazione email</span></li>
                             </ul>
-                            <a href="index.html#configuratore" class="btn-plan btn-plan-green">Seleziona Piano</a>
+                            <a href="index.html#configuratore" class="btn-plan btn-plan-primary">Seleziona piano <span class="arrow">→</span></a>
                         </div>
 
                         <!-- Pro -->
                         <div class="plan-card">
-                            <div class="plan-icon-wrap picon-purple">
-                                <i data-lucide="shield-check"></i>
+                            <div class="plan-head">
+                                <span class="plan-kicker">Piano · III</span>
+                                <h3 class="plan-name">Pro</h3>
+                                <p class="plan-desc">Per chi vuole il massimo, anche con e-commerce.</p>
                             </div>
-                            <h3 class="plan-name">Pro</h3>
-                            <p class="plan-desc">Ideale per chi vuole il massimo.</p>
-                            <div class="plan-price plan-price-purple">
+                            <div class="plan-price">
                                 <span class="p-currency">€</span>
                                 <span class="p-amount">999</span>
+                                <span class="p-period">una tantum</span>
                             </div>
-                            <p class="price-note">+ 79€/mese</p>
+                            <p class="price-note">+ 79€ / mese di mantenimento</p>
                             <ul class="plan-features">
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Avanzato + Shop</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>SEO Completo</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Modifiche Illimitate</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Hosting Incluso</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Assistenza Prioritaria</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>E-commerce Base</li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Sito avanzato + Shop</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>SEO completo &amp; ottimizzazione</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Modifiche illimitate</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Hosting premium incluso</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Assistenza prioritaria</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>E-commerce fino a 50 prodotti</span></li>
                             </ul>
-                            <a href="index.html#configuratore" class="btn-plan">Seleziona Piano</a>
+                            <a href="index.html#configuratore" class="btn-plan">Seleziona piano <span class="arrow">→</span></a>
                         </div>
 
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- ============================================================
-                 MACRO-CARD: SOCIAL MEDIA MANAGEMENT
+                 MACRO-CARD: SOCIAL MEDIA
                  ============================================================ -->
-            <div class="macro-card" id="macro-social">
+            <article class="macro-card" id="macro-social" data-screen-label="Social Media">
                 <div class="macro-card-header" id="header-social" role="button" tabindex="0" aria-expanded="false">
-                    <div class="macro-icon macro-icon-social">
-                        <i data-lucide="share-2"></i>
+                    <div class="macro-side">
+                        <span class="macro-num">02</span>
                     </div>
+                    <div class="macro-icon"><i data-lucide="share-2"></i></div>
                     <div class="macro-card-info">
-                        <span class="macro-label">ABBONAMENTO MENSILE</span>
-                        <h2 class="macro-title">Social Media Management</h2>
+                        <span class="macro-label">Abbonamento mensile</span>
+                        <h2 class="macro-title">Social Media <em>Management</em></h2>
+                        <p class="macro-desc">Una voce coerente, ogni giorno. Strategia editoriale prima di qualsiasi post.</p>
                     </div>
                     <div class="macro-card-actions">
-                        <span class="macro-count">3 piani disponibili</span>
+                        <span class="macro-count">3 piani</span>
                         <button class="btn-scopri" aria-label="Mostra piani Social Media">
-                            Scopri Piani
-                            <div class="macro-toggle" id="toggle-social">
-                                <i data-lucide="chevron-down"></i>
-                            </div>
+                            <span class="label-open">Scopri piani</span>
+                            <span class="label-close">Riduci</span>
+                            <div class="macro-toggle" id="toggle-social"><i data-lucide="chevron-down"></i></div>
                         </button>
                     </div>
                 </div>
@@ -192,114 +194,164 @@
 
                         <!-- Presenza Base -->
                         <div class="plan-card">
-                            <div class="plan-icon-wrap picon-blue">
-                                <i data-lucide="zap"></i>
+                            <div class="plan-head">
+                                <span class="plan-kicker">Piano · I</span>
+                                <h3 class="plan-name">Presenza</h3>
+                                <p class="plan-desc">Costante, essenziale, sempre online.</p>
                             </div>
-                            <h3 class="plan-name">Presenza Base</h3>
-                            <p class="plan-desc">Presenza essenziale e costante.</p>
-                            <div class="plan-price plan-price-blue">
+                            <div class="plan-price">
                                 <span class="p-currency">€</span>
                                 <span class="p-amount">249</span>
-                                <span class="p-period">/mese</span>
+                                <span class="p-period">/ mese</span>
                             </div>
                             <ul class="plan-features">
-                                <li class="feat-yes"><i data-lucide="check"></i>1 Piattaforma</li>
-                                <li class="feat-yes"><i data-lucide="check"></i>8 Post/mese</li>
-                                <li class="feat-yes"><i data-lucide="check"></i>4 Stories/settimana</li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>1 piattaforma</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>8 post al mese</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>4 stories a settimana</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Calendario editoriale mensile</span></li>
                             </ul>
-                            <a href="index.html#configuratore" class="btn-plan">Seleziona Piano</a>
+                            <a href="index.html#configuratore" class="btn-plan">Seleziona piano <span class="arrow">→</span></a>
                         </div>
 
                         <!-- Crescita [CONSIGLIATO] -->
-                        <div class="plan-card plan-featured plan-pink">
-                            <div class="badge-consigliato bdg-pink">CONSIGLIATO</div>
-                            <div class="plan-icon-wrap picon-pink">
-                                <i data-lucide="smartphone"></i>
+                        <div class="plan-card plan-featured">
+                            <div class="plan-ribbon">Consigliato</div>
+                            <div class="plan-head">
+                                <span class="plan-kicker">Piano · II</span>
+                                <h3 class="plan-name">Crescita</h3>
+                                <p class="plan-desc">Per chi vuole farsi notare e interagire davvero.</p>
                             </div>
-                            <h3 class="plan-name">Crescita</h3>
-                            <p class="plan-desc">Crescita e interazione attiva.</p>
-                            <div class="plan-price plan-price-pink">
+                            <div class="plan-price">
                                 <span class="p-currency">€</span>
                                 <span class="p-amount">449</span>
-                                <span class="p-period">/mese</span>
+                                <span class="p-period">/ mese</span>
                             </div>
                             <ul class="plan-features">
-                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>2 Piattaforme</li>
-                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>12 Post/mese</li>
-                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>Stories quotidiane</li>
-                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>4 Reels/mese</li>
-                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>1 Uscita in loco</li>
-                                <li class="feat-yes feat-pink"><i data-lucide="check"></i>Report mensile</li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>2 piattaforme</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>12 post al mese</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Stories quotidiane</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>4 reels al mese</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>1 uscita in loco</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Report mensile</span></li>
                             </ul>
-                            <a href="index.html#configuratore" class="btn-plan btn-plan-pink">Seleziona Piano</a>
+                            <a href="index.html#configuratore" class="btn-plan btn-plan-primary">Seleziona piano <span class="arrow">→</span></a>
                         </div>
 
                         <!-- Dominio -->
                         <div class="plan-card">
-                            <div class="plan-icon-wrap picon-purple">
-                                <i data-lucide="shield-check"></i>
+                            <div class="plan-head">
+                                <span class="plan-kicker">Piano · III</span>
+                                <h3 class="plan-name">Dominio</h3>
+                                <p class="plan-desc">Autorità nel tuo settore, senza compromessi.</p>
                             </div>
-                            <h3 class="plan-name">Dominio</h3>
-                            <p class="plan-desc">Autorità assoluta nel settore.</p>
-                            <div class="plan-price plan-price-purple">
+                            <div class="plan-price">
                                 <span class="p-currency">€</span>
                                 <span class="p-amount">749</span>
-                                <span class="p-period">/mese</span>
+                                <span class="p-period">/ mese</span>
                             </div>
                             <ul class="plan-features">
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>3 Piattaforme</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>16+ Post/mese</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Stories quotidiane</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>8 Reels/mese</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>2 Uscite in loco</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Strategia editoriale</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Gestione commenti</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Report mensile</li>
-                                <li class="feat-yes feat-purple"><i data-lucide="check"></i>Call mensile</li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>3 piattaforme</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>16+ post al mese</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Stories quotidiane</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>8 reels al mese</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>2 uscite in loco</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Strategia editoriale dedicata</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Gestione commenti &amp; DM</span></li>
+                                <li class="feat-yes"><i data-lucide="check"></i><span>Report &amp; call mensile</span></li>
                             </ul>
-                            <a href="index.html#configuratore" class="btn-plan">Seleziona Piano</a>
+                            <a href="index.html#configuratore" class="btn-plan">Seleziona piano <span class="arrow">→</span></a>
                         </div>
 
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- CTA FINALE -->
-            <div class="sv-cta text-center">
-                <p class="sv-cta-label">Non sai quale piano fa per te?</p>
-                <a href="index.html#configuratore" class="btn-hero-cta">
-                    <span class="cta-icon"><i data-lucide="rocket"></i></span>
-                    Configura la tua soluzione
-                    <span class="cta-arrow">→</span>
-                </a>
-                <p class="cta-sub">Gratis · Senza impegno · Risposta in 24h</p>
+            <!-- CTA finale -->
+            <div class="sv-cta">
+                <span class="eyebrow centered">Non sai quale fa per te?</span>
+                <h2>Lascia che ti <em>guidiamo</em> noi.</h2>
+                <p class="lede centered">Un breve configuratore, una proposta personalizzata in 24 ore. Senza email automatiche.</p>
+                <div class="sv-cta-actions">
+                    <a href="index.html#configuratore" class="btn btn-primary btn-lg">
+                        Configura il tuo sito <span class="arrow">→</span>
+                    </a>
+                    <a href="mailto:olimezz@icloud.com" class="btn btn-ghost btn-lg">
+                        Scrivici una mail
+                    </a>
+                </div>
             </div>
 
         </div>
     </main>
 
+    <!-- FOOTER (semplificato, condiviso) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <img src="emblem.png" alt="Quota Adriatica" class="brand-mark">
+                        <span class="brand-word">
+                            <span class="one">Quota</span>
+                            <span class="two">Adriatica</span>
+                        </span>
+                    </a>
+                    <p>Studio digitale per le aziende abruzzesi che vogliono dominare il proprio mercato.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul>
+                        <li><a href="#macro-web">Sviluppo Web</a></li>
+                        <li><a href="#macro-social">Social Media</a></li>
+                        <li>Local SEO</li>
+                        <li>Google Ads</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sito</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#problema">Il Problema</a></li>
+                        <li><a href="index.html#chi-siamo">Studio</a></li>
+                        <li><a href="index.html#configuratore">Configura</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contatto</h4>
+                    <ul>
+                        <li><a href="mailto:olimezz@icloud.com">olimezz@icloud.com</a></li>
+                        <li>Pescara, Abruzzo</li>
+                        <li>Lun—Ven · 9–18</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-tagline">Dalla costa alla vetta del tuo mercato.</span>
+                <span>© 2026 Quota Adriatica · Pescara</span>
+            </div>
+        </div>
+    </footer>
+
     <script>
         lucide.createIcons();
 
-        // Navbar scroll
         const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 10);
-        }, { passive: true });
+        const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 30);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
 
-        // Hamburger
         document.getElementById('hamburger').addEventListener('click', function () {
             this.classList.toggle('active');
             document.getElementById('navLinks').classList.toggle('open');
         });
 
-        // Accordion toggle con stagger animation
+        // Accordion
         function togglePlans(type) {
+            const macro     = document.getElementById('macro-' + type);
             const container = document.getElementById('plans-' + type);
-            const toggle   = document.getElementById('toggle-' + type);
-            const header   = document.getElementById('header-' + type);
-            const macro    = document.getElementById('macro-' + type);
-            const isOpen   = container.classList.contains('open');
+            const toggle    = document.getElementById('toggle-' + type);
+            const header    = document.getElementById('header-' + type);
+            const isOpen    = container.classList.contains('open');
 
             container.classList.toggle('open');
             toggle.classList.toggle('rotated');
@@ -307,27 +359,26 @@
             header.setAttribute('aria-expanded', !isOpen);
 
             if (!isOpen) {
-                // Animate plan cards in with stagger
                 const cards = container.querySelectorAll('.plan-card');
-                cards.forEach((card, i) => {
-                    card.classList.remove('animated');
-                    card.style.animationDelay = '';
-                    void card.offsetWidth; // force reflow
-                    card.style.animationDelay = (i * 0.09) + 's';
-                    card.classList.add('animated');
+                cards.forEach((c, i) => {
+                    c.classList.remove('animated');
+                    void c.offsetWidth;
+                    c.style.animationDelay = (i * 0.08) + 's';
+                    c.classList.add('animated');
                 });
             }
         }
 
-        // Bind click + keyboard on headers
         ['web', 'social'].forEach(type => {
-            const header = document.getElementById('header-' + type);
-            header.addEventListener('click', () => togglePlans(type));
-            header.addEventListener('keydown', e => {
+            const h = document.getElementById('header-' + type);
+            h.addEventListener('click', () => togglePlans(type));
+            h.addEventListener('keydown', e => {
                 if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePlans(type); }
             });
         });
-    </script>
 
+        // Open first by default
+        togglePlans('web');
+    </script>
 </body>
 </html>
