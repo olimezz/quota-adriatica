@@ -90,8 +90,8 @@
                     </div>
                     <div class="trust-divider"></div>
                     <div class="trust-item">
-                        <strong>∞</strong>
-                        <span>Iterazioni</span>
+                        <strong>Garanzia</strong>
+                        <span>Di risultato</span>
                     </div>
                 </div>
             </div>
@@ -240,8 +240,16 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="cfg-note">Raccontaci la tua attività</label>
-                                <textarea id="cfg-note" rows="4" placeholder="Es. Gestisco un ristorante a Pescara e vorrei più prenotazioni dirette..."></textarea>
+                                <label for="cfg-obiettivo">Qual è il tuo obiettivo principale?</label>
+                                <div class="select-wrap">
+                                    <select id="cfg-obiettivo">
+                                        <option value="" disabled selected>Seleziona un obiettivo…</option>
+                                        <option value="Trovare clienti">🎯 Trovare clienti</option>
+                                        <option value="Vendere online">🛒 Vendere online</option>
+                                        <option value="Rinnovare l'immagine">✨ Rinnovare l'immagine</option>
+                                    </select>
+                                    <span class="select-arrow">▾</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -397,6 +405,101 @@
                 </a>
 
             </div>
+
+            <!-- Showcase — Casi Studio -->
+            <div class="showcase" id="casi-studio">
+                <div class="showcase-head">
+                    <span class="eyebrow centered">Risultati reali · Non promesse</span>
+                    <h3 class="showcase-title">Ecco cosa costruiamo <em>davvero</em>.</h3>
+                </div>
+
+                <!-- Case 1: Il Veliero -->
+                <div class="showcase-item">
+                    <div class="showcase-copy">
+                        <span class="showcase-tag">
+                            <i data-lucide="umbrella"></i>
+                            01 — Costa · Lido Premium
+                        </span>
+                        <h4 class="showcase-name">Il Veliero</h4>
+                        <p class="showcase-desc">
+                            Digitalizzazione dei servizi di spiaggia e branding emozionale per l'Adriatico.
+                            Sito mobile-first con prenotazione diretta, menù digitale e un'identità visiva
+                            che trasforma il lido in una <strong>destinazione</strong>.
+                        </p>
+                        <ul class="showcase-results">
+                            <li><i data-lucide="check-circle"></i><span>Prenotazione ombrelloni online</span></li>
+                            <li><i data-lucide="check-circle"></i><span>Menù digitale con QR code</span></li>
+                            <li><i data-lucide="check-circle"></i><span>Branding emozionale adriatico</span></li>
+                        </ul>
+                        <a href="https://il-veliero-one.vercel.app/" target="_blank" rel="noopener noreferrer" class="showcase-cta">
+                            Vedi il sito live <span class="arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="showcase-device">
+                        <div class="browser-mockup">
+                            <div class="browser-chrome">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-url">
+                                    <i data-lucide="lock" style="width:10px;height:10px;opacity:0.5"></i>
+                                    <span>il-veliero-one.vercel.app</span>
+                                </div>
+                                <div class="browser-actions">
+                                    <i data-lucide="maximize-2" style="width:11px;height:11px;opacity:0.35"></i>
+                                </div>
+                            </div>
+                            <div class="browser-viewport">
+                                <iframe src="https://il-veliero-one.vercel.app/" loading="lazy" title="Il Veliero — Sito live" sandbox="allow-scripts allow-same-origin"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2: Dario Padovani -->
+                <div class="showcase-item showcase-item--reversed">
+                    <div class="showcase-copy">
+                        <span class="showcase-tag">
+                            <i data-lucide="umbrella"></i>
+                            01 — Costa · Lido Premium
+                        </span>
+                        <h4 class="showcase-name">Dario Padovani</h4>
+                        <p class="showcase-desc">
+                            Piattaforma web orientata alla lead generation e all'authority per professionisti.
+                            Design editoriale, SEO strutturale e un percorso utente che trasforma il visitatore
+                            in <strong>contatto qualificato</strong>.
+                        </p>
+                        <ul class="showcase-results">
+                            <li><i data-lucide="check-circle"></i><span>Lead generation strutturata</span></li>
+                            <li><i data-lucide="check-circle"></i><span>SEO e authority professionale</span></li>
+                            <li><i data-lucide="check-circle"></i><span>Design premium e conversione</span></li>
+                        </ul>
+                        <a href="https://newdariopadovani.vercel.app/" target="_blank" rel="noopener noreferrer" class="showcase-cta">
+                            Vedi il sito live <span class="arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="showcase-device">
+                        <div class="browser-mockup">
+                            <div class="browser-chrome">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-url">
+                                    <i data-lucide="lock" style="width:10px;height:10px;opacity:0.5"></i>
+                                    <span>newdariopadovani.vercel.app</span>
+                                </div>
+                                <div class="browser-actions">
+                                    <i data-lucide="maximize-2" style="width:11px;height:11px;opacity:0.35"></i>
+                                </div>
+                            </div>
+                            <div class="browser-viewport">
+                                <iframe src="https://newdariopadovani.vercel.app/" loading="lazy" title="Dario Padovani — Sito live" sandbox="allow-scripts allow-same-origin"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -511,8 +614,8 @@
         <div class="group">
             <label>Palette</label>
             <div class="tweak-row">
-                <button class="swatch active" data-palette="default" style="background: linear-gradient(135deg, #002053 50%, #018766 50%)" title="Default (Logo)"></button>
-                <button class="swatch" data-palette="mare" style="background: linear-gradient(135deg, #4d7e9b 50%, #c89a5a 50%)" title="Mare"></button>
+                <button class="swatch active" data-palette="mare" style="background: linear-gradient(135deg, #4d7e9b 50%, #c89a5a 50%)" title="Azzurra e Marroncina"></button>
+                <button class="swatch" data-palette="default" style="background: linear-gradient(135deg, #002053 50%, #018766 50%)" title="Inchiostro e Verde (Logo)"></button>
                 <button class="swatch" data-palette="terra" style="background: linear-gradient(135deg, #844a2c 50%, #6b8c4f 50%)" title="Terra"></button>
                 <button class="swatch" data-palette="mono" style="background: linear-gradient(135deg, #1a1610 50%, #8a8170 50%)" title="Mono"></button>
             </div>
@@ -634,10 +737,10 @@
             if (!email) { document.getElementById('cfg-email').classList.add('input-error'); valid = false; }
             if (!valid) return;
 
-            const note = document.getElementById('cfg-note').value;
+            const obiettivo = document.getElementById('cfg-obiettivo').value;
             const subj = encodeURIComponent(`Configuratore · ${selections.tipo || 'n.d.'} | ${nome}`);
             const body = encodeURIComponent(
-                `Nome: ${nome}\nEmail: ${email}\nTipo: ${selections.tipo || 'n.d.'}\nStile: ${selections.stile || 'n.d.'}\nNote: ${note}`
+                `Nome: ${nome}\nEmail: ${email}\nTipo: ${selections.tipo || 'n.d.'}\nStile: ${selections.stile || 'n.d.'}\nObiettivo: ${obiettivo || 'n.d.'}`
             );
             window.location.href = `mailto:olimezz@icloud.com?subject=${subj}&body=${body}`;
 
@@ -718,7 +821,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.card, .p-feature, .config-shell, .about-content, .about-img-wrap').forEach(el => {
+        document.querySelectorAll('.card, .p-feature, .config-shell, .about-content, .about-img-wrap, .showcase-item').forEach(el => {
             el.style.opacity = 0;
             el.style.transform = 'translateY(28px)';
             el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
