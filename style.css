@@ -1304,7 +1304,8 @@ h3 { font-size: clamp(1.4rem, 2vw, 1.7rem); }
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 72px;
+    column-gap: 72px;
+    row-gap: 48px;
     align-items: center;
 }
 
@@ -1360,13 +1361,22 @@ h3 { font-size: clamp(1.4rem, 2vw, 1.7rem); }
     color: var(--carta);
 }
 
-.about-content .section-num { margin-bottom: 18px; display: block; }
-
-.about-content h2 {
-    color: var(--ink);
-    margin-bottom: 24px;
+.about-header {
+    grid-column: 1 / -1;
+    max-width: 850px;
 }
-.about-content h2 em {
+
+.about-header .section-num {
+    margin-bottom: 18px;
+    display: block;
+}
+
+.about-header h2 {
+    color: var(--ink);
+    margin-bottom: 0;
+}
+
+.about-header h2 em {
     font-style: italic;
     color: var(--terra);
     font-weight: 400;
