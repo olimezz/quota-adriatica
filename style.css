@@ -1,19 +1,19 @@
 /* ============================================================
    QUOTA ADRIATICA — Sistema di design
-   Palette estratta direttamente dal logo:
-   inchiostro navy + terracotta + pergamena + mare
+   Palette estratta direttamente dal nuovo logo:
+   inchiostro navy scuro + verde smeraldo/teal + azzurro ciano
    ============================================================ */
 
 :root {
     /* ----- Palette principale (dal logo) ----- */
-    --ink:         #16304f;   /* navy profondo del cerchio */
-    --ink-deep:    #0e1f36;   /* notte adriatica */
-    --terra:       #a85f3a;   /* terracotta del lettering QUOTA */
-    --terra-deep:  #844a2c;
-    --mare:        #4d7e9b;   /* azzurro delle onde nel logo */
-    --mare-light:  #7ba2bc;
-    --bronzo:      #b8794b;
-    --gold:        #c89a5a;
+    --ink:         #002053;   /* nuovo navy profondo del logo */
+    --ink-deep:    #001230;   /* nuova notte adriatica */
+    --terra:       #018766;   /* nuovo verde smeraldo/teal dal logo */
+    --terra-deep:  #005c45;
+    --mare:        #06d9f7;   /* nuovo azzurro ciano brillante dal logo */
+    --mare-light:  #6ce8f9;
+    --bronzo:      #00ad83;   /* sfumatura smeraldo */
+    --gold:        #c89a5a;   /* oro raffinato per accenti */
 
     /* ----- Sfondi tonali ----- */
     --carta:       #faf6ee;   /* sfondo principale, paper warm */
