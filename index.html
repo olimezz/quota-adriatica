@@ -2570,7 +2570,16 @@ h3 { font-size: clamp(1.4rem, 2vw, 1.7rem); }
            NAVBAR scroll state
            ============================================================ */
         const navbar = document.getElementById('navbar');
-        const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 30);
+        let scrollTicking = false;
+        const onScroll = () => {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    navbar.classList.toggle('scrolled', window.scrollY > 30);
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        };
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
 

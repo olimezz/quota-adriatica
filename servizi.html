@@ -2734,7 +2734,16 @@ h3 { font-size: clamp(1.4rem, 2vw, 1.7rem); }
         });
 
         const navbar = document.getElementById('navbar');
-        const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 30);
+        let scrollTicking = false;
+        const onScroll = () => {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    navbar.classList.toggle('scrolled', window.scrollY > 30);
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        };
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
 
@@ -2759,10 +2768,13 @@ h3 { font-size: clamp(1.4rem, 2vw, 1.7rem); }
             if (!isOpen) {
                 const cards = container.querySelectorAll('.plan-card');
                 cards.forEach(c => c.classList.remove('animated'));
-                void container.offsetWidth;
-                cards.forEach((c, i) => {
-                    c.style.animationDelay = (i * 0.08) + 's';
-                    c.classList.add('animated');
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        cards.forEach((c, i) => {
+                            c.style.animationDelay = (i * 0.08) + 's';
+                            c.classList.add('animated');
+                        });
+                    });
                 });
             }
         }
