@@ -691,9 +691,13 @@
                 const target = document.querySelector(href);
                 if (!target) return;
                 e.preventDefault();
+                
+                // Legge la posizione prima di modificare il DOM (evita il layout thrashing)
+                const y = target.getBoundingClientRect().top + window.scrollY - 80;
+                
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('open');
-                const y = target.getBoundingClientRect().top + window.scrollY - 80;
+                
                 window.scrollTo({ top: y, behavior: 'smooth' });
             });
         });
