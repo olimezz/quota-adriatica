@@ -9,12 +9,18 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+    <!-- Preconnessione e DNS Prefetch per ottimizzare le performance dei font e delle icone -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- Google Fonts caricati in sincrono con display=swap per velocizzare l'LCP ed evitare sbalzi di layout (FOUT) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
+    <!-- Precaricamento dell'immagine Hero (LCP) per scaricarla immediatamente prima di altre risorse -->
     <link rel="preload" as="image" href="emblem.webp" type="image/webp" fetchpriority="high">
 
     <script src="https://unpkg.com/lucide@latest" defer></script>
@@ -28,7 +34,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-row">
             <a href="index.html" class="brand" data-comment-anchor="brand">
-                <img src="emblem.webp" alt="Quota Adriatica" class="brand-mark" width="420" height="420">
+                <img src="emblem.webp" alt="Quota Adriatica" class="brand-mark" width="420" height="420" decoding="async">
                 <span class="brand-word">
                     <span class="one">Quota</span>
                     <span class="two">Adriatica</span>
@@ -107,7 +113,7 @@
                 <div class="hero-ring r3"></div>
                 <span class="hero-coord tl">42°27'N — Adriatico</span>
                 <span class="hero-coord br">14°13'E — Pescara</span>
-                <img src="emblem.webp" alt="Emblema Quota Adriatica" class="hero-emblem" width="420" height="420" fetchpriority="high">
+                <img src="emblem.webp" alt="Emblema Quota Adriatica" class="hero-emblem" width="420" height="420" fetchpriority="high" decoding="sync">
             </div>
         </div>
 
@@ -518,7 +524,7 @@
                 <h2>Siamo di <em>Pescara</em>. Conosciamo il mare, la terra e i tuoi clienti.</h2>
             </div>
             <div class="about-img-wrap">
-                <img src="pontedelmare.webp" alt="Ponte del Mare — Pescara" width="3840" height="2160" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(180deg, var(--mare), var(--ink))';">
+                <img src="pontedelmare.webp" alt="Ponte del Mare — Pescara" width="3840" height="2160" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(180deg, var(--mare), var(--ink))';">
                 <div class="about-stamp">
                     <span class="num">100%</span>
                     <span class="lbl">Abruzzo</span>
@@ -560,7 +566,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="brand">
-                        <img src="emblem.webp" alt="Quota Adriatica" class="brand-mark" width="420" height="420" loading="lazy">
+                        <img src="emblem.webp" alt="Quota Adriatica" class="brand-mark" width="420" height="420" loading="lazy" decoding="async">
                         <span class="brand-word">
                             <span class="one">Quota</span>
                             <span class="two">Adriatica</span>
