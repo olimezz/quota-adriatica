@@ -19,6 +19,7 @@
 
     <!-- Rimosso precaricamento di emblem.webp perché non è l'LCP su questa pagina (velocizza download dei font critici) -->
 
+    <link rel="stylesheet" href="cookie-banner.css">
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <style>
 /* latin-ext */
@@ -275,7 +276,7 @@
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="servizi.html" class="nav-link">Piani &amp; Prezzi</a>
+                <a href="index.html#soluzioni" class="nav-link">Piani &amp; Prezzi</a>
             </div>
             <a href="index.html#configuratore" class="nav-cta">Inizia <span>→</span></a>
         </div>
@@ -344,7 +345,7 @@
             </div>
             <div class="footer-bottom">
                 <span class="footer-tagline">Dalla costa alla vetta del tuo mercato.</span>
-                <span>© 2026 Quota Adriatica · Pescara · <a href="termini-e-condizioni.html" style="text-decoration: underline;">Termini e condizioni</a></span>
+                <span>© 2026 Quota Adriatica · Pescara · <a href="termini-e-condizioni.html" style="text-decoration: underline;">Termini e condizioni</a> · <a href="cookie-policy.html" style="text-decoration: underline;">Cookie Policy</a></span>
             </div>
         </div>
     </footer>
@@ -410,32 +411,6 @@
 
     </script>
     <!-- Cookie Banner -->
-    <div id="cookie-banner" style="position: fixed; bottom: 24px; left: 24px; right: 24px; max-width: 480px; background: var(--ink-deep); color: var(--carta); padding: 24px; border-radius: var(--radius-lg); z-index: 9999; box-shadow: 0 24px 60px -20px rgba(22,48,79,.4); display: none; align-items: flex-start; gap: 16px; border: 1px solid rgba(250,246,238,.1);">
-        <div style="flex-grow: 1;">
-            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 8px; color: var(--gold);">Cookie Policy</h4>
-            <p style="font-size: 0.85rem; color: rgba(250,246,238,.7); line-height: 1.5; margin: 0;">
-                Utilizziamo i cookie per migliorare la tua esperienza e per le finalità descritte nei nostri <a href="termini-e-condizioni.html" style="text-decoration: underline; color: var(--carta);">Termini e condizioni</a>.
-            </p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-            <button id="cookie-accept" class="btn btn-terra" style="padding: 10px 20px; font-size: 0.8rem; width: 100%;">Accetta</button>
-            <button id="cookie-reject" class="btn btn-ghost-light" style="padding: 10px 20px; font-size: 0.8rem; width: 100%;">Rifiuta</button>
-        </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            if (!localStorage.getItem("cookie_consent")) {
-                document.getElementById("cookie-banner").style.display = "flex";
-            }
-            document.getElementById("cookie-accept").addEventListener("click", function() {
-                localStorage.setItem("cookie_consent", "accepted");
-                document.getElementById("cookie-banner").style.display = "none";
-            });
-            document.getElementById("cookie-reject").addEventListener("click", function() {
-                localStorage.setItem("cookie_consent", "rejected");
-                document.getElementById("cookie-banner").style.display = "none";
-            });
-        });
-    </script>
+    <script src="cookie-banner.js"></script>
 </body>
 </html>
