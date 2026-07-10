@@ -2625,16 +2625,9 @@
                 gap: 40px
             }
 
-            /* 3 → 2 columns for solution & maintenance cards */
-            .solutions-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px
-            }
-
-            .maintenance-plans .cards-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px
-            }
+            /* Adjust gap for tablet landscape */
+            .solutions-grid { gap: 20px }
+            .maintenance-plans .cards-grid { gap: 20px }
         }
 
         /* ── Tablet Portrait: 481px – 768px ────────────────────── */
@@ -3664,6 +3657,12 @@
                     void target.offsetWidth; // trigger reflow for animation
                     target.classList.add('active');
                     if (window.lucide) lucide.createIcons();
+                }
+
+                // Show or hide the maintenance plans based on active tab
+                const manutenzione = document.getElementById('manutenzione');
+                if (manutenzione) {
+                    manutenzione.style.display = targetId === 'siti-web' ? 'block' : 'none';
                 }
             });
         });
