@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --color-cobalt: #0054A6;
+  --color-cobalt-light: #0077EA;
+  --color-night: #0A0F1C;
+  --color-night-light: #151E32;
+}
+
+@layer base {
+  body {
+    @apply bg-night text-slate-100 antialiased selection:bg-cobalt selection:text-white;
+    overflow-x: hidden;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glass-panel {
+  @apply bg-night-light/80 backdrop-blur-md border border-slate-700/50 shadow-xl;
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* --- Interactive Card Hover --- */
+.interactive-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.interactive-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px -10px rgba(0, 119, 234, 0.18), 0 0 20px 0 rgba(0, 119, 234, 0.1);
+  border-color: rgba(0, 119, 234, 0.55);
+}
+
+.interactive-card-cyan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px -10px rgba(6, 182, 212, 0.18), 0 0 20px 0 rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.55);
+}
+
+/* --- Smooth Tab Transitions --- */
+.tab-content-active {
+  animation: fadeInScale 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.985) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* --- GDPR Modals & Backdrop --- */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content-box {
+  opacity: 0;
+  transform: translateY(20px) scale(0.97);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.is-open .modal-content-box {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Custom Modal Scrollbar */
+.modal-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-scroll::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 8px;
+}
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.5);
+  border-radius: 8px;
+}
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 119, 234, 0.8);
+}
+
+/* Toggle Switch */
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #0077EA;
+  background-color: #0077EA;
+}
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #0077EA;
+}
+
