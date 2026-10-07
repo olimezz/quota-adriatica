@@ -901,8 +901,11 @@
         <!-- Form body with scroll -->
         <div class="py-5 overflow-y-auto modal-scroll pr-1">
           <form id="contact-form" class="space-y-4" novalidate>
-            <!-- Honeypot anti-spam invisibile -->
-            <input type="text" name="_hp" id="contact-hp" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <!-- Honeypot anti-spam invisibile (trappola per bot) -->
+            <div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none;" aria-hidden="true">
+              <label for="contact-hp">Non compilare questo campo</label>
+              <input type="text" name="_hp" id="contact-hp" tabindex="-1" autocomplete="off" value="" />
+            </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <!-- Nome -->

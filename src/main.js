@@ -316,7 +316,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactBtnText = document.getElementById('contact-btn-text');
   const contactBtnSpinner = document.getElementById('contact-btn-spinner');
 
+  // Tracciamento del tempo di compilazione per intercettare i bot (Time-Trap)
+  let formStartTime = Date.now();
+  openContactBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      formStartTime = Date.now();
+    });
+  });
+
   if (contactForm) {
+    contactForm.addEventListener('focusin', () => {
+      if (!formStartTime) formStartTime = Date.now();
+    }, { once: true });
+
     // Helper feedback function
     const showContactFeedback = (message, isError = true) => {
       if (!contactFeedback) return;
@@ -342,32 +354,62 @@ document.addEventListener('DOMContentLoaded', () => {
       const privacy = document.getElementById('contact-privacy')?.checked;
       const hp = document.getElementById('contact-hp')?.value || '';
 
-      // Validazione lato client
+      // 1. Validazione campi obbligatori
       if (!nome || !cognome || !attivita || !telefono || !email) {
         showContactFeedback('Tutti i campi contrassegnati con * sono obbligatori.', true);
         return;
       }
 
+      if (nome.length < 2 || cognome.length < 2) {
+        showContactFeedback('Inserisci un nome e un cognome validi.', true);
+        return;
+      }
+
+      // 2. Validazione sintassi email & blocco provider usa-e-getta noti
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        showContactFeedback('Inserisci un indirizzo email valido.', true);
+        showContactFeedback('Inserisci un indirizzo email valido (es. nome@dominio.it).', true);
         return;
       }
 
-      const phoneCleanDigits = telefono.replace(/[^0-9]/g, '');
-      if (phoneCleanDigits.length < 6) {
-        showContactFeedback('Inserisci un numero di cellulare valido.', true);
+      const emailDomain = email.split('@')[1]?.toLowerCase();
+      const disposableDomains = ['mailinator.com', 'yopmail.com', 'tempmail.com', '10minutemail.com', 'test.com', 'example.com', 'fake.com'];
+      if (emailDomain && disposableDomains.includes(emailDomain)) {
+        showContactFeedback('Inserisci un indirizzo email personale o aziendale attivo (no email usa-e-getta).', true);
         return;
       }
 
+      // 3. Validazione avanzata del numero di telefono
+      const phoneDigits = telefono.replace(/\D/g, '');
+      if (phoneDigits.length < 8 || phoneDigits.length > 15) {
+        showContactFeedback('Inserisci un numero di cellulare valido (da 8 a 15 cifre).', true);
+        return;
+      }
+
+      // Riconoscimento cifre fittizie o tutte uguali (es. 0000000000, 1111111111)
+      if (/^(\d)\1+$/.test(phoneDigits)) {
+        showContactFeedback('Il recapito telefonico inserito non sembra valido. Inserisci un numero reale.', true);
+        return;
+      }
+
+      const fakeSequences = ['12345678', '123456789', '987654321', '0123456789'];
+      if (fakeSequences.some(seq => phoneDigits.includes(seq))) {
+        showContactFeedback('Inserisci un numero di cellulare valido per essere ricontattato.', true);
+        return;
+      }
+
+      // 4. Privacy
       if (!privacy) {
         showContactFeedback('È necessario accettare l\'Informativa sulla Privacy per procedere.', true);
         return;
       }
 
+      // Calcolo tempo di compilazione (Time-Trap)
+      const elapsedMilliseconds = Date.now() - (formStartTime || Date.now());
+
       // Stato di caricamento
       if (contactSubmitBtn) contactSubmitBtn.disabled = true;
-      if (contactBtnText) contactBtnText.textContent = 'Invio in corso...';
+      if (contactBtnText) contactBtnText.textContent = 'Verifica e invio...';
       if (contactBtnSpinner) contactBtnSpinner.classList.remove('hidden');
       if (contactFeedback) contactFeedback.classList.add('hidden');
 
@@ -386,6 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
             messaggio,
             privacy,
             _hp: hp,
+            _submissionTime: elapsedMilliseconds
           }),
         });
 
