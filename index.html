@@ -147,7 +147,7 @@
                     <span class="text-4xl font-black text-white">€299</span>
                     <span class="text-slate-400 text-xs font-medium">una tantum</span>
                   </div>
-                  <div class="text-cobalt-light text-sm font-semibold mt-1">+ €29/mese manutenzione</div>
+                  <div class="text-cobalt-light text-sm font-semibold mt-1">+ €30/mese manutenzione</div>
                 </div>
                 
                 <div class="mb-4">
@@ -184,7 +184,7 @@
                     <span class="text-4xl font-black text-white">€549</span>
                     <span class="text-slate-400 text-xs font-medium">una tantum</span>
                   </div>
-                  <div class="text-cyan-400 text-sm font-semibold mt-1">+ €49/mese manutenzione</div>
+                  <div class="text-cyan-400 text-sm font-semibold mt-1">+ €30/mese manutenzione</div>
                 </div>
                 
                 <div class="mb-4">
@@ -218,7 +218,7 @@
                     <span class="text-4xl font-black text-white">€999</span>
                     <span class="text-slate-400 text-xs font-medium">una tantum</span>
                   </div>
-                  <div class="text-cobalt-light text-sm font-semibold mt-1">+ €79/mese manutenzione</div>
+                  <div class="text-cobalt-light text-sm font-semibold mt-1">+ €30/mese manutenzione</div>
                 </div>
                 
                 <div class="mb-4">
@@ -288,20 +288,87 @@
                 </div>
               </div>
               <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 border border-slate-800 bg-slate-900/50 rounded-2xl">
-                  <div class="font-bold text-lg text-white mb-1">Piano Base</div>
-                  <div class="text-3xl font-extrabold text-cobalt-light mb-3">€19<span class="text-sm font-normal text-slate-400">/mese</span></div>
-                  <p class="text-xs text-slate-300 leading-relaxed">Monitoraggio sicurezza costante, backup regolari e aggiornamenti tecnici di sistema.</p>
+                <!-- Base -->
+                <div class="p-6 border border-slate-800 bg-slate-900/50 rounded-2xl flex flex-col justify-between">
+                  <div>
+                    <div class="font-bold text-lg text-white mb-1">Base</div>
+                    <div class="text-3xl font-extrabold text-cobalt-light mb-4">+19€<span class="text-sm font-normal text-slate-400">/mese</span></div>
+                    <ul class="space-y-2.5 text-xs text-slate-300">
+                      <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-cobalt-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Tempo di esecuzione: <strong class="text-white">72h</strong></span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-cobalt-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-white">5 modifiche</strong>/mese</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="text-xs text-slate-400 pt-3 mt-4 border-t border-slate-800/80 leading-relaxed">
+                    Monitoraggio sicurezza costante, backup regolari e aggiornamenti tecnici di sistema.
+                  </p>
                 </div>
-                <div class="p-6 border border-cobalt/50 bg-cobalt/10 rounded-2xl relative">
-                  <div class="font-bold text-lg text-white mb-1">Piano Plus</div>
-                  <div class="text-3xl font-extrabold text-cyan-400 mb-3">€39<span class="text-sm font-normal text-slate-400">/mese</span></div>
-                  <p class="text-xs text-slate-300 leading-relaxed">Backup continui, aggiornamenti, supporto prioritario su WhatsApp e piccole modifiche mensili ai contenuti.</p>
+
+                <!-- Plus -->
+                <div class="p-6 border border-cobalt/50 bg-cobalt/10 rounded-2xl relative flex flex-col justify-between">
+                  <div class="absolute -top-3 right-6 bg-gradient-to-r from-cobalt to-cyan-500 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                    Consigliato
+                  </div>
+                  <div>
+                    <div class="font-bold text-lg text-white mb-1">Plus</div>
+                    <div class="text-3xl font-extrabold text-cyan-400 mb-4">+39€<span class="text-sm font-normal text-slate-400">/mese</span></div>
+                    <ul class="space-y-2.5 text-xs text-slate-300">
+                      <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Tempo di esecuzione: <strong class="text-white">48h</strong></span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-white">15 modifiche</strong>/mese</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="text-xs text-slate-300 pt-3 mt-4 border-t border-cobalt/20 leading-relaxed">
+                    Backup continui, aggiornamenti tecnici e supporto prioritario su WhatsApp.
+                  </p>
                 </div>
-                <div class="p-6 border border-slate-800 bg-slate-900/50 rounded-2xl">
-                  <div class="font-bold text-lg text-white mb-1">Piano Intensivo</div>
-                  <div class="text-3xl font-extrabold text-cobalt-light mb-3">€69<span class="text-sm font-normal text-slate-400">/mese</span></div>
-                  <p class="text-xs text-slate-300 leading-relaxed">Assistenza full continua, modifiche frequenti, ottimizzazione costante della velocità e monitoraggio conversioni.</p>
+
+                <!-- Intensiva -->
+                <div class="p-6 border border-slate-800 bg-slate-900/50 rounded-2xl flex flex-col justify-between">
+                  <div>
+                    <div class="font-bold text-lg text-white mb-1">Intensiva</div>
+                    <div class="text-3xl font-extrabold text-cobalt-light mb-4">+69€<span class="text-sm font-normal text-slate-400">/mese</span></div>
+                    <ul class="space-y-2.5 text-xs text-slate-300">
+                      <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-cobalt-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Tempo di esecuzione: <strong class="text-white">24h</strong></span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-cobalt-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-white">Modifiche illimitate</strong></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="text-xs text-slate-400 pt-3 mt-4 border-t border-slate-800/80 leading-relaxed">
+                    Assistenza full continua, massima priorità e ottimizzazione costante della velocità.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Chiarimento modifiche incluse -->
+              <div class="mt-8 p-5 sm:p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col md:flex-row gap-4 items-start">
+                <div class="p-2.5 rounded-xl bg-cobalt/15 border border-cobalt/30 text-cyan-400 shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                    Cosa includono le modifiche?
+                  </h4>
+                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    Gli interventi previsti negli abbonamenti si riferiscono alla gestione dinamica dei contenuti esistenti (come la sostituzione di locandine, l'aggiornamento di testi, prezzi o gallery fotografiche). Sono pensati per mantenere il tuo sito sempre aggiornato e vivo. Eventuali interventi strutturali, modifiche al layout grafico o la creazione di nuove sezioni non incluse nel progetto originale verranno valutati separatamente con un preventivo dedicato.
+                  </p>
                 </div>
               </div>
             </div>
