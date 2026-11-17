@@ -1,6 +1,9 @@
 import './style.css'
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.__quotaInitialized) return;
+  window.__quotaInitialized = true;
+
   // --- 1. Dynamic Year in Footer ---
   const yearElement = document.getElementById('year');
   if (yearElement) {
@@ -61,36 +64,51 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 5. Tabs Logic (Servizi & Prezzi) ---
   const tabWeb = document.getElementById('tab-web');
   const tabSocial = document.getElementById('tab-social');
+  const tabAi = document.getElementById('tab-ai');
   const contentWeb = document.getElementById('content-web');
   const contentSocial = document.getElementById('content-social');
+  const contentAi = document.getElementById('content-ai');
 
   if (tabWeb && tabSocial && contentWeb && contentSocial) {
-    const activateWeb = () => {
-      tabWeb.classList.add('bg-cobalt', 'text-white', 'shadow-md');
-      tabWeb.classList.remove('text-slate-400');
-      tabSocial.classList.remove('bg-cobalt', 'text-white', 'shadow-md');
-      tabSocial.classList.add('text-slate-400');
-      
-      contentWeb.classList.remove('hidden');
-      contentWeb.classList.add('block', 'tab-content-active');
-      contentSocial.classList.remove('block', 'tab-content-active');
-      contentSocial.classList.add('hidden');
+    const allServiceTabs = [tabWeb, tabSocial, tabAi].filter(Boolean);
+    const allServiceContents = [contentWeb, contentSocial, contentAi].filter(Boolean);
+
+    const setActiveServiceTab = (activeBtn, activeContent) => {
+      allServiceTabs.forEach(btn => {
+        btn.classList.remove('bg-cobalt', 'text-white', 'shadow-md');
+        btn.classList.add('text-slate-400');
+      });
+      activeBtn.classList.add('bg-cobalt', 'text-white', 'shadow-md');
+      activeBtn.classList.remove('text-slate-400');
+
+      allServiceContents.forEach(content => {
+        content.classList.remove('block', 'tab-content-active');
+        content.classList.add('hidden');
+      });
+      if (activeContent) {
+        activeContent.classList.remove('hidden');
+        activeContent.classList.add('block', 'tab-content-active');
+        activeContent.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-revealed'));
+      }
     };
 
-    const activateSocial = () => {
-      tabSocial.classList.add('bg-cobalt', 'text-white', 'shadow-md');
-      tabSocial.classList.remove('text-slate-400');
-      tabWeb.classList.remove('bg-cobalt', 'text-white', 'shadow-md');
-      tabWeb.classList.add('text-slate-400');
-      
-      contentSocial.classList.remove('hidden');
-      contentSocial.classList.add('block', 'tab-content-active');
-      contentWeb.classList.remove('block', 'tab-content-active');
-      contentWeb.classList.add('hidden');
+    const activateWeb = () => setActiveServiceTab(tabWeb, contentWeb);
+    const activateSocial = () => setActiveServiceTab(tabSocial, contentSocial);
+    const activateAi = () => {
+      if (tabAi && contentAi) setActiveServiceTab(tabAi, contentAi);
     };
 
     tabWeb.addEventListener('click', activateWeb);
     tabSocial.addEventListener('click', activateSocial);
+    if (tabAi) {
+      tabAi.addEventListener('click', activateAi);
+    }
+
+    document.querySelectorAll('[data-open-tab="ai"]').forEach(link => {
+      link.addEventListener('click', () => {
+        activateAi();
+      });
+    });
   }
 
   // --- 6. Tabs Logic (Portfolio) ---
