@@ -9,26 +9,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            },
-            colors: {
-              cobalt: {
-                DEFAULT: '#0054A6',
-                light: '#0077EA',
+      if (window.location.protocol === 'file:') {
+        window.tailwind = {
+          config: {
+            theme: {
+              extend: {
+                fontFamily: {
+                  sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                },
+                colors: {
+                  cobalt: {
+                    DEFAULT: '#0054A6',
+                    light: '#0077EA',
+                  },
+                  night: {
+                    DEFAULT: '#0A0F1C',
+                    light: '#151E32',
+                  },
+                },
               },
-              night: {
-                DEFAULT: '#0A0F1C',
-                light: '#151E32',
-              },
             },
-          },
-        },
+          }
+        };
+        const twScript = document.createElement('script');
+        twScript.src = 'https://cdn.tailwindcss.com';
+        document.head.appendChild(twScript);
       }
     </script>
     <style>
@@ -711,7 +717,7 @@
             <div class="grid lg:grid-cols-12 gap-8 mb-10 items-stretch">
               <!-- Card Prezzo & Piano VoxPulse AI (5 cols) -->
               <div class="lg:col-span-5 glass-panel p-7 sm:p-8 rounded-3xl flex flex-col justify-between border-amber-400/60 relative shadow-[0_15px_45px_rgba(245,158,11,0.15)] reveal-on-scroll">
-                <div class="absolute -top-3.5 left-6 bg-gradient-to-r from-amber-500 to-amber-300 text-night px-4 py-1 rounded-full text-[11px] font-black tracking-wider uppercase shadow-md">
+                <div class="absolute -top-3.5 left-6 bg-amber-400 text-night px-4 py-1 rounded-full text-[11px] font-black tracking-wider uppercase shadow-md" style="background-color: #fbbf24; background-image: linear-gradient(90deg, #f59e0b 0%, #fcd34d 100%); color: #0A0F1C;">
                   IN FASE SPERIMENTALE • CENTRALINO AI
                 </div>
 
@@ -773,7 +779,7 @@
                 </div>
 
                 <div class="space-y-3">
-                  <a href="https://wa.me/393281057144?text=Ciao%20Quota%20Adriatica,%20vorrei%20informazioni%20su%20VoxPulse%20AI%20(Agente%20Telefonico)" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-night text-center font-extrabold text-sm transition-all block shadow-lg shadow-amber-500/20 active:scale-98">
+                  <a href="https://wa.me/393281057144?text=Ciao%20Quota%20Adriatica,%20vorrei%20informazioni%20su%20VoxPulse%20AI%20(Agente%20Telefonico)" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-5 rounded-xl bg-amber-400 hover:bg-amber-300 text-night text-center font-extrabold text-sm transition-all block shadow-lg shadow-amber-500/20 active:scale-98" style="background-color: #fbbf24; background-image: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%); color: #0A0F1C;">
                     Richiedi una Demo di VoxPulse AI
                   </a>
                   <button type="button" class="open-contact-modal w-full py-3 px-4 rounded-xl border border-slate-700 hover:bg-slate-800 text-slate-200 text-center font-bold text-xs sm:text-sm transition-colors block cursor-pointer">
